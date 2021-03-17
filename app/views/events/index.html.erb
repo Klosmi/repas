@@ -1,10 +1,13 @@
 
+<div class="barreorange">
+</div>
 <div class="container">
   <h2> Current Event</h2>
   <br>
   <h2> Event History </h2>
   <div class= "buttonevent">
     <% @events.each do |event| %>
+    <%= link_to event_path(event) do %>
     <div class="firstevent" >
       <%= image_tag("") %>
       <p>
@@ -12,12 +15,14 @@
         <button type="button" class="btn btn-warning">Warning</button>
         <a class="btn btn-ghost" href="#">Write a story</a>
          -->
-        <%= link_to event.title, event_path(event) %>
+      <%= event.title  %>
+
+
         <br>
         <%= event.date %>
       </p>
     </div>
-        <!-- <div class = "nbranswer"><p>XXX</p></div> -->
+     <% end %>
          <% end %>
   </div>
   <div class="buttonnewevent">
