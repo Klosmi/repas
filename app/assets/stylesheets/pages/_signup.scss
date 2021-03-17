@@ -1,7 +1,7 @@
 body{
   background-color:#FFF;
 }
-.signup_container {
+.signup-container {
   display: flex;
   width: 60%;
   margin: 0 auto;
@@ -12,12 +12,12 @@ body{
 }
 
 /* text */
-.signup_container .signup_title {
+.signup-container .signup_title {
   overflow: auto;
   color: #FFA049;
   font-weight: bold;
 }
-.signup_title{
+.signup-title{
   text-align: left;
   margin-top: 50px;
 }
