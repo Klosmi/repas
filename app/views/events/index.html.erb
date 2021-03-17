@@ -1,1 +1,29 @@
-<h1> EVENTS </h1>
+
+<div class="container">
+  <h2> Current Event</h2>
+  <br>
+  <h2> Event History </h2>
+  <div class= "buttonevent">
+    <% @events.each do |event| %>
+    <div class="firstevent" >
+      <%= image_tag("") %>
+      <p>
+        <!--
+        <button type="button" class="btn btn-warning">Warning</button>
+        <a class="btn btn-ghost" href="#">Write a story</a>
+         -->
+        <%= link_to event.title, event_path(event) %>
+        <br>
+        <%= event.date %>
+      </p>
+    </div>
+        <!-- <div class = "nbranswer"><p>XXX</p></div> -->
+         <% end %>
+  </div>
+  <div class="buttonnewevent">
+  <p>
+    <%= link_to "Create a new event", events_path %>
+  </p>
+</div>
+</div>
+

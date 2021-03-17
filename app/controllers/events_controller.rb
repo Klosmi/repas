@@ -17,6 +17,7 @@ class EventsController < ApplicationController
       redirect_to event_path(@event)
     else
       render "new"
+    end
   end
 
   private
@@ -26,6 +27,3 @@ class EventsController < ApplicationController
   end
 
 end
-
-
-
