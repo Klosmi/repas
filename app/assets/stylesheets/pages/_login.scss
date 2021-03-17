@@ -1,7 +1,7 @@
 body{
   background-color:#FFF;
 }
-.login_container {
+.login-container {
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -12,12 +12,12 @@ body{
 }
 
 /* text */
-.login_container .login_title {
+.login-container .login_title {
   overflow: auto;
   color: #FFA049;
   font-weight: bold;
 }
-.login_title{
+.login-title{
   text-align: left;
   margin-top: 50px;
 }
