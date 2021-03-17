@@ -1,0 +1,43 @@
+
+
+ // .nbranswer {
+ //   color:orange;
+ //   border: 1px solid orange;
+ //   background-color:white;
+ //   border-radius: 50%;
+ //   width:60px;
+ //   text-align: center;
+ //   padding: 3px 0px 0px 0px;
+ // }
+
+ .btnindex {
+  // text-align-last: right;
+  text-align: center;
+  padding:15px;
+  width: 200px;
+  padding: 10px;
+  background-color: orange;
+  border-radius:10px;
+}
+
+.title {
+   display: flex;
+   flex-direction: row;
+   margin: 20px;
+    }
+
+.number_guest {
+   color:orange;
+   border: 1px solid orange;
+   background-color:white;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   padding: 15px 0px 0px 0px;
+ }
+
+
+h1,h2 {
+  text-align: center
+}
