@@ -1,5 +1,5 @@
 class Guest < ApplicationRecord
-  belongs_to :event, through: :user
+  belongs_to :event
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
