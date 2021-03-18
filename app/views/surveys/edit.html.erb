@@ -1,6 +1,6 @@
 <h1> Please fill the form </h1>
-
-<%= simple_form_for(survey) do |f| %>
+<div>
+<%= simple_form_for([@event, @guest, @survey]) do |f| %>
   <%= f.input :nut %>
   <%= f.input :peanut %>
   <%= f.input :shellfish %>
@@ -21,5 +21,6 @@
   <%= f.input :vegetarian %>
   <%= f.input :comment %>
 
-  <%= f.submit %>
+  <%= f.submit"SEND FORM" %>
 <% end %>
+</div>
