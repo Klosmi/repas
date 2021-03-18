@@ -1,23 +1,18 @@
 <div class="barreorange">
 </div>
 <div class="container">
-  <div class="title">
-<h1><%= @event.title %></h1>
-<div class="number_guest"><%= @event.number_guest %></div>
-</div>
-<h2><%= @event.address %></h2>
-<h2><%= @event.date %></h2>
 
-
-
-
+<h1>show for event </h1>
+<%= @event.title %>
 <br>
-<div class="nbranswer"><h3>number of answer</h2></div>
-  <br>
-
-
-  <div class="btnindex"><%= link_to "Back to history", events_path %></div>
-
+<%= @event.address %>
+<br>
+<%= @event.date %>
+<br>
+ <br>
 
 
 </div>
+<%= link_to"back", events_path %>
+<br>
+<%= link_to"create a participant for this event", new_event_guest_path(@event.id) %>
