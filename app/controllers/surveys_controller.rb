@@ -1,16 +1,18 @@
 class SurveysController < ApplicationController
+
   def create
   @event = Event.find(params[:event_id])
   @guest = Guest.find(params[:guest_id])
   @survey = Survey.new(survey_params)
   @surveys.guest.event = @survey
-    if @survey.save
+     if @survey.save
     else
       render "events/show"
     end
   end
 
   def edit
+
     @event = Event.find(params[:event_id])
     @guest = Guest.find(params[:guest_id])
     @survey = Survey.find(params[:id])

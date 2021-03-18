@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Event.destroy_all if Rails.env.development?
 
-user= User.new(email:"lindak12@yahoo.fr", password:"password")
+user= User.new(email:"lindak15@yahoo.fr", password:"password")
 user.save
 
 Event.create!(
