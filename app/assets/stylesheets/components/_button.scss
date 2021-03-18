@@ -34,17 +34,21 @@
 
 // button general
 .login-btn:hover {
-  padding: 5px 20px;
-    background-color: #F27400;
+  padding: 5px 50px;
+    background-color: $color-yellow;
     border-radius:100px;
-    color: #FFF;
+    color: $color-orange;
+    font-weight: 600;
     text-decoration: none;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
 .login-btn {
-  padding: 5px 20px;
-    background-color: #FCDAA4;
+  padding: 5px 50px;
+    background-color: #FFF;
     border-radius:100px;
+    font-weight: 600;
     color: #F27400;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 

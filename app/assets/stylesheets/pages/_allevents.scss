@@ -1,117 +1,119 @@
-
-.wedding img{
-  border-radius: 50%;
-  height: 350px;
+.wedding img {
+    border-radius: 100px;
+    height: 100px;
 }
 
-   .buttonevent{
+.buttonevent {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start ;
-  }
+    justify-content: flex-start;
+}
 
 
 
 .barreorange {
-  background:$color-orange;
-  height:100px;
-  width:100%;
-  opacity: 0.70;
+    background: $color-orange;
+    height: 100px;
+    width: 100%;
+    opacity: 0.70;
 
 }
 
 .barreorange h1 {
-  color:white;
-  font-family: arial;
-  text-align: left;
-  padding: 20px 0px 0px 60px;
-  // text-shadow: $color-lightorange 0.1em 0.1em 0.1em;
+    color: white;
+    font-family: arial;
+    text-align: left;
+    padding: 20px 0px 0px 60px;
+    // text-shadow: $color-lightorange 0.1em 0.1em 0.1em;
 
 }
 
 
 h2 {
-color:$color-lightorange;
-// margin:20px 0px 0px 180px;
+    color: $color-lightorange;
+    // margin:20px 0px 0px 180px;
 }
 
 .firstevent {
-margin-top: 0;
-margin-right: auto;
-margin-bottom: 0;
-margin-left: auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
 }
 
- .firstevent {
-   border-radius: 10px;
-   background-color: $color-butter;
-   opacity: 0.90;
-   text-align: center;
-   width: 600px;
-   box-shadow: 1px 1px 2px grey;
+.firstevent {
+    border-radius: 10px;
+    background-color: $color-butter;
+    opacity: 0.90;
+    text-align: center;
+    width: 600px;
+    box-shadow: 1px 1px 2px grey;
 
- }
+}
 
 
- .buttonevent{
+.buttonevent {
 
-   & a {
-   color: $color-lightorange;
-   text-shadow: white 0.1em 0.1em 0.1em;
-   opacity: 0.90;
-   text-decoration: none;
-   font-family: arial;
-   font-weight: bold;
-   }
- }
+    & a {
+        color: $color-lightorange;
+        text-shadow: white 0.1em 0.1em 0.1em;
+        opacity: 0.90;
+        text-decoration: none;
+        font-family: arial;
+        font-weight: bold;
+    }
+}
 
- .firstevent:hover {
-   background-color:$color-butter;
-   color:$color-lightorange;
-   opacity: 0.90;
+.firstevent:hover {
+    background-color: $color-butter;
+    color: $color-lightorange;
+    opacity: 0.90;
 
-   & a {
-   color: black;
-   opacity: 0.90;
-   text-decoration: none;
-   }
- }
+    & a {
+        color: black;
+        opacity: 0.90;
+        text-decoration: none;
+    }
+}
 
 
 .buttonnewevent {
 
-  padding:15px;
-  width: 250px;
-  height:60px;
-  background-color: $color-orange;
-  border-radius:30px;
-  position: relative;
-  left: 85%;
-  box-shadow: 1px 1px 2px grey;
-  // text-align: center;
-  // text-align-last: right
+    padding: 15px;
+    width: 250px;
+    height: 60px;
+    background-color: $color-orange;
+    border-radius: 30px;
+    position: relative;
+    left: 85%;
+    box-shadow: 1px 1px 2px grey;
+    // text-align: center;
+    // text-align-last: right
 }
+
 .buttonnewevent p {
-  position: relative;
-  left: 30px;
+    position: relative;
+    left: 30px;
 
-  & a {
-   color: white;
-   font-weight: bold;
-   opacity: 0.90;
-   text-decoration: none;
-   }}
+    & a {
+        color: white;
+        font-weight: bold;
+        opacity: 0.90;
+        text-decoration: none;
+    }
+}
 
-   .buttonnewevent:hover {
-   background-color:$color-butter;
-   color:$color-lightorange;
-   opacity: 0.90;
+.buttonnewevent:hover {
+    background-color: $color-butter;
+    color: $color-lightorange;
+    opacity: 0.90;
 
-   & a {
-   color: $color-lightorange;
-   opacity: 0.90;
-   text-decoration: none;
-   }}
+    & a {
+        color: $color-lightorange;
+        opacity: 0.90;
+        text-decoration: none;
+    }
+}
 
 
 

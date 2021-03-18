@@ -268,41 +268,38 @@
 //   width: 180px;
 //   background-position: center;
 // }
-html,
-body,
-.full-screen {
+
+.full-page {
     height: 100%;
     width: 100%;
-    background: rgb(242,116,0);
-background: linear-gradient(32deg, rgba(242,116,0,1) 0%, rgba(192,44,105,1) 88%);
+
+    background: linear-gradient(32deg, rgba(242, 116, 0, 1) 0%, rgba(192, 44, 105, 1) 88%);
 }
 
-// position
 .homepage {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
 }
 
 //
 .home-title {
-   color: #FFF;
-   padding: 50px;
-
+    color: #FFF;
+    padding: 50px;
 }
 
 a .login {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
 a .login:hover {
-  opacity: 1;
+    opacity: 1;
 }
