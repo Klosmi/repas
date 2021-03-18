@@ -1,30 +1,116 @@
 
+.wedding img{
+  border-radius: 50%;
+  height: 350px;
+}
+
+   .buttonevent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start ;
+  }
+
+
+
 .barreorange {background:orange;
-  height:150px;
+  height:100px;
   width:100%;
+  opacity: 0.70;
+
+}
+
+.barreorange h1 {
+  color:white;
+  font-family: arial;
+  text-align: left;
+  padding: 20px 0px 0px 60px;
+  text-shadow: #FF7F50 0.1em 0.1em 0.1em;
+
 }
 
 
 h2 {
 color:#FF7F50;
+margin:20px 0px 0px 180px;
+font-family: Montserrat, serif;
 }
 
 .firstevent {
-  border-radius: 10px;
-  background-color: #FACD6B;
-  text-align: center;
-  width: 600px;
+margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
 }
+
+ .firstevent {
+   border-radius: 10px;
+   background-color: #FACD6B;
+   opacity: 0.90;
+   text-align: center;
+   width: 600px;
+   box-shadow: 1px 1px 2px grey;
+
+ }
+
+
+ .buttonevent{
+
+   & a {
+   color: #FF7F50;
+   text-shadow: white 0.1em 0.1em 0.1em;
+   opacity: 0.90;
+   text-decoration: none;
+   font-family: arial;
+   font-weight: bold;
+   }}
+
+ .firstevent:hover {
+   background-color:#FFDDAB;
+   color:#FF7F50;
+   opacity: 0.90;
+
+   & a {
+   color: black;
+   opacity: 0.90;
+   text-decoration: none;
+   }}
 
 
 .buttonnewevent {
+
   padding:15px;
-  width: 200px;
+  width: 250px;
+  height:60px;
   background-color: orange;
-  border-radius:10px;
+  border-radius:30px;
+  position: relative;
+  left: 85%;
+  box-shadow: 1px 1px 2px grey;
   // text-align: center;
   // text-align-last: right
 }
+.buttonnewevent p {
+  position: relative;
+  left: 30px;
+
+  & a {
+   color: white;
+   font-weight: bold;
+   opacity: 0.90;
+   text-decoration: none;
+   }}
+
+   .buttonnewevent:hover {
+   background-color:#FFDDAB;
+   color:#FF7F50;
+   opacity: 0.90;
+
+   & a {
+   color: #FF7F50;
+   opacity: 0.90;
+   text-decoration: none;
+   }}
+
 
 
 
