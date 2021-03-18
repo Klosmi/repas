@@ -33,14 +33,15 @@
 }
 
 // button general
-.login:hover {
+.login-btn:hover {
   padding: 5px 20px;
     background-color: #F27400;
     border-radius:100px;
     color: #FFF;
+    text-decoration: none;
 }
 
-.login {
+.login-btn {
   padding: 5px 20px;
     background-color: #FCDAA4;
     border-radius:100px;
