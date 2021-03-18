@@ -14,7 +14,7 @@ body{
 /* text */
 .login-container .login_title {
   overflow: auto;
-  color: #FFA049;
+  color: $color-lightorange;
   font-weight: bold;
 }
 .login-title{
@@ -27,8 +27,8 @@ body{
 }
 
 .form-group {
-  color: #2C423D;
+  color: $color-text;
 }
 .form-check-label{
-  color:#707D7A;
+  color: $color-text;
 }

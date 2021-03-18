@@ -1,8 +1,8 @@
 
 
  // .nbranswer {
- //   color:orange;
- //   border: 1px solid orange;
+ //   color:$color-orange;
+ //   border: 1px solid $color-orange;
  //   background-color:white;
  //   border-radius: 50%;
  //   width:60px;
@@ -16,7 +16,7 @@
   padding:15px;
   width: 200px;
   padding: 10px;
-  background-color: orange;
+  background-color: $color-orange;
   border-radius:10px;
 }
 
@@ -27,8 +27,8 @@
     }
 
 .number_guest {
-   color:orange;
-   border: 1px solid orange;
+   color: $color-orange;
+   border: 1px solid $color-orange;
    background-color:white;
    border-radius: 50%;
    width: 60px;

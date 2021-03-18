@@ -32,4 +32,18 @@
   }
 }
 
-/* general buttons */
+// button general
+.login:hover {
+  padding: 5px 20px;
+    background-color: #F27400;
+    border-radius:100px;
+    color: #FFF;
+}
+
+.login {
+  padding: 5px 20px;
+    background-color: #FCDAA4;
+    border-radius:100px;
+    color: #F27400;
+}
+
