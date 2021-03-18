@@ -1,26 +1,109 @@
-<h1> Please fill the form </h1>
-<div>
-<%= simple_form_for([@event, @guest, @survey]) do |f| %>
-  <%= f.input :nut %>
-  <%= f.input :peanut %>
-  <%= f.input :shellfish %>
-  <%= f.input :egg %>
-  <%= f.input :fish %>
-  <%= f.input :soy %>
-  <%= f.input :celery %>
-  <%= f.input :sesame_seed %>
-  <%= f.input :milk %>
-  <%= f.input :sulphite %>
-  <%= f.input :mustard %>
-  <%= f.input :gluten %>
-  <%= f.input :salt %>
-  <%= f.input :sugar %>
-  <%= f.input :hallal %>
-  <%= f.input :casher %>
-  <%= f.input :vegan %>
-  <%= f.input :vegetarian %>
-  <%= f.input :comment %>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+<div class="accordion" id="accordionExample">
+  <%= simple_form_for([@event, @guest, @survey]) do |f| %>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Do You Have Allergies?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Cochez vos allergies</strong> <%= f.input :nut %>
+    <%= f.input :peanut %>
+    <%= f.input :shellfish %>
+    <%= f.input :egg %>
+    <%= f.input :fish %>
+    <%= f.input :soy %>
+    <%= f.input :celery %>
+    <%= f.input :sesame_seed %>
+    <%= f.input :milk %>
+    <%= f.input :sulphite %>
+    <%= f.input :mustard %>
+    <%= f.input :gluten %> <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+
+        Do you have salt or sugar(Food with a low glycemic index) restrictions?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>choose your situation </strong> <%= f.input :salt %><%= f.input :sugar %> <code>.accordion-body></code>, though the transition does limit overflow.
+      </div>
+    </div>
+
+  </div>
+  <div class="accordion-item">
+
+
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Do you have religious restrictions?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> <%= f.input :hallal %>
+    <%= f.input :casher %> <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
   <%= f.submit"SEND FORM" %>
-<% end %>
+  <% end %>
 </div>
+
+
+
+
+
+<!--
+  <div class= "margsurvey">
+  <h1> Please fill the form </h1>
+  <div class= "answer">
+  <%= simple_form_for([@event, @guest, @survey]) do |f| %>
+    <p> Do you have allergies?</p>
+    <%= f.input :nut %>
+    <%= f.input :peanut %>
+    <%= f.input :shellfish %>
+    <%= f.input :egg %>
+    <%= f.input :fish %>
+    <%= f.input :soy %>
+    <%= f.input :celery %>
+    <%= f.input :sesame_seed %>
+    <%= f.input :milk %>
+    <%= f.input :sulphite %>
+    <%= f.input :mustard %>
+    <%= f.input :gluten %>
+    <p> Do you have salt restrictions?</p>
+    <%= f.input :salt %>
+    <p> Do you have sugar restrictions? (Food with a low glycemic index)</p>
+    <%= f.input :sugar %>
+    <p>Do you have religious restrictions?</p>
+    <%= f.input :hallal %>
+    <%= f.input :casher %>
+    <p> Do you have any meat restrictions?</p>
+    <%= f.input :vegan %>
+    <%= f.input :vegetarian %>
+    <%= f.input :comment %>
+
+    <%= f.submit"SEND FORM" %>
+  <% end %>
+</div>
+</div>
+
+
+
+
+
+
+ -->
