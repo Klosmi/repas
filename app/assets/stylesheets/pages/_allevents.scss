@@ -12,7 +12,8 @@
 
 
 
-.barreorange {background:orange;
+.barreorange {
+  background:$color-orange;
   height:100px;
   width:100%;
   opacity: 0.70;
@@ -24,15 +25,14 @@
   font-family: arial;
   text-align: left;
   padding: 20px 0px 0px 60px;
-  text-shadow: #FF7F50 0.1em 0.1em 0.1em;
+  // text-shadow: $color-lightorange 0.1em 0.1em 0.1em;
 
 }
 
 
 h2 {
-color:#FF7F50;
-margin:20px 0px 0px 180px;
-font-family: Montserrat, serif;
+color:$color-lightorange;
+// margin:20px 0px 0px 180px;
 }
 
 .firstevent {
@@ -44,7 +44,7 @@ margin-left: auto;
 
  .firstevent {
    border-radius: 10px;
-   background-color: #FACD6B;
+   background-color: $color-butter;
    opacity: 0.90;
    text-align: center;
    width: 600px;
@@ -56,24 +56,26 @@ margin-left: auto;
  .buttonevent{
 
    & a {
-   color: #FF7F50;
+   color: $color-lightorange;
    text-shadow: white 0.1em 0.1em 0.1em;
    opacity: 0.90;
    text-decoration: none;
    font-family: arial;
    font-weight: bold;
-   }}
+   }
+ }
 
  .firstevent:hover {
-   background-color:#FFDDAB;
-   color:#FF7F50;
+   background-color:$color-butter;
+   color:$color-lightorange;
    opacity: 0.90;
 
    & a {
    color: black;
    opacity: 0.90;
    text-decoration: none;
-   }}
+   }
+ }
 
 
 .buttonnewevent {
@@ -81,7 +83,7 @@ margin-left: auto;
   padding:15px;
   width: 250px;
   height:60px;
-  background-color: orange;
+  background-color: $color-orange;
   border-radius:30px;
   position: relative;
   left: 85%;
@@ -101,12 +103,12 @@ margin-left: auto;
    }}
 
    .buttonnewevent:hover {
-   background-color:#FFDDAB;
-   color:#FF7F50;
+   background-color:$color-butter;
+   color:$color-lightorange;
    opacity: 0.90;
 
    & a {
-   color: #FF7F50;
+   color: $color-lightorange;
    opacity: 0.90;
    text-decoration: none;
    }}
@@ -115,8 +117,8 @@ margin-left: auto;
 
 
 // .nbranswer {
-//   color:orange;
-//   border: 1px solid orange;
+//   color:$color-orange;
+//   border: 1px solid $color-orange;
 //   background-color:white;
 //   border-radius: 50%;
 //   width:60px;
