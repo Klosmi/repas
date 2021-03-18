@@ -1,0 +1,25 @@
+<h1> Please fill the form </h1>
+
+<%= simple_form_for(survey) do |f| %>
+  <%= f.input :nut %>
+  <%= f.input :peanut %>
+  <%= f.input :shellfish %>
+  <%= f.input :egg %>
+  <%= f.input :fish %>
+  <%= f.input :soy %>
+  <%= f.input :celery %>
+  <%= f.input :sesame_seed %>
+  <%= f.input :milk %>
+  <%= f.input :sulphite %>
+  <%= f.input :mustard %>
+  <%= f.input :gluten %>
+  <%= f.input :salt %>
+  <%= f.input :sugar %>
+  <%= f.input :hallal %>
+  <%= f.input :casher %>
+  <%= f.input :vegan %>
+  <%= f.input :vegetarian %>
+  <%= f.input :comment %>
+
+  <%= f.submit %>
+<% end %>

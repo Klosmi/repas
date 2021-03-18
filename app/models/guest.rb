@@ -1,5 +1,6 @@
 class Guest < ApplicationRecord
   belongs_to :event
+  has_many :surveys
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true

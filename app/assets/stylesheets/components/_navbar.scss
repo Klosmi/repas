@@ -1,12 +1,33 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+    justify-content: space-between;
+    background: #fff9f3;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+    flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+    width: 40px;
+}
+
+
+.logo-beta:hover {
+    transform: rotate(-30deg);
+    transition-duration: 400ms;
+}
+
+.logo-beta {
+    transition-duration: 400ms;
+}
+
+.avatar:hover {
+    opacity: 30%;
+    transition-duration: 1200ms;
+}
+
+.avatar {
+    opacity: 80%;
+    transition-duration: 1200ms;
+
 }
