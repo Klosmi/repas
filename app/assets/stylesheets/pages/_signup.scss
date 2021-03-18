@@ -14,7 +14,7 @@ body{
 /* text */
 .signup-container .signup_title {
   overflow: auto;
-  color: #FFA049;
+  color: $color-lightorange;
   font-weight: bold;
 }
 .signup-title{
@@ -27,16 +27,16 @@ body{
 }
 
 .form-group {
-  color: #2C423D;
+  color: $color-text;
 }
 .form-check-label{
-  color:#707D7A;
+  color: $color-text;
 }
 
 /* required asterisk */
 .required {
   abbr{
   text-decoration: none;
-  color:#FFA049;
+  color: $color-lightorange;
 }
 }
