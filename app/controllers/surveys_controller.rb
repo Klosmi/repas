@@ -26,9 +26,12 @@ class SurveysController < ApplicationController
   def confirmation
   end
 
+
+
   private
 
   def survey_params
     params.require(:survey).permit(:nut, :peanut, :shellfish, :egg, :fish, :soy, :celery, :sesame_seed, :milk, :sulfite, :mustard, :gluten, :salt, :sugar, :hallal, :casher, :vegan, :vegetarian, :comment)
   end
+
 end

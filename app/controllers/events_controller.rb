@@ -19,12 +19,45 @@ class EventsController < ApplicationController
     else
       render "new"
     end
+
+
+  end
+  def preferences
+    @event = Event.find(params[:event_id])
+    @surveys = Survey.where(event_id: @event.id)
   end
 
-  private
+  #   def preferences
+  #     @surveys = Survey.all
+  #   end
 
-  def event_params
-    params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
-  end
+  #   private
 
+  #   def event_params
+  #     params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
+  #   end
+
+  # end
+  # class preferences < ApplicationController
+  #   def
+  #   end
+
+
+  #   def new
+  #     @result = Result.new
+  #   end
+
+  #   def create
+  #     @result = Result.create(params[:result])
+
+  #     if @result.save
+  #       redirect_to @result
+  #     else
+  #       render action: :new
+  #     end
+  #   end
+
+  #   def show
+  #     @result = Result.find(params[:id])
+  #   end
 end

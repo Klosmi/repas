@@ -17,3 +17,6 @@
 <%= link_to"back", events_path %>
 <br>
 <%= link_to"create a participant for this event", new_event_guest_path(@event.id) %>
+<br>
+<%= link_to"show result of form validate", event_preferences_path(@event.id) %>
+
