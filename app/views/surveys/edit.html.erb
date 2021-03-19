@@ -1,19 +1,22 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-
+<div class="container">
+  <h1> Please fill the form </h1>
+  <br>
 
 <div class="accordion" id="accordionExample">
   <%= simple_form_for([@event, @guest, @survey]) do |f| %>
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         Do You Have Allergies?
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Cochez vos allergies</strong> <%= f.input :nut %>
+        <strong>check mark that concerns you</strong> <%= f.input :nut %>
     <%= f.input :peanut %>
     <%= f.input :shellfish %>
     <%= f.input :egg %>
@@ -24,11 +27,12 @@
     <%= f.input :milk %>
     <%= f.input :sulphite %>
     <%= f.input :mustard %>
-    <%= f.input :gluten %> <code>.accordion-body</code>, though the transition does limit overflow.
+    <%= f.input :gluten %>
       </div>
     </div>
-
   </div>
+
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -38,14 +42,13 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>choose your situation </strong> <%= f.input :salt %><%= f.input :sugar %> <code>.accordion-body></code>, though the transition does limit overflow.
+        <strong>check mark that concerns you</strong> <%= f.input :salt %><%= f.input :sugar %> <code>.accordion-body></code>
       </div>
     </div>
-
   </div>
+
+
   <div class="accordion-item">
-
-
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         Do you have religious restrictions?
@@ -53,14 +56,46 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> <%= f.input :hallal %>
-    <%= f.input :casher %> <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>check mark that concerns you</strong> <%= f.input :hallal %>
+    <%= f.input :casher %> <code>.accordion-body</code>
       </div>
     </div>
   </div>
-  <%= f.submit"SEND FORM" %>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Do you have any meat restrictions?
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>check mark that concerns you</strong> <%= f.input :vegan %>
+    <%= f.input :vegetarian %> <code>.accordion-body</code>
+      </div>
+    </div>
+  </div>
+
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFifth">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
+        Add important information
+      </button>
+    </h2>
+    <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong></strong> <%= f.input :comment %> <code>.accordion-body</code>
+      </div>
+    </div>
+  </div>
+
+
+  <%= f.submit"SEND YOUR FORM" %>
   <% end %>
 </div>
+</div>
+
 
 
 
