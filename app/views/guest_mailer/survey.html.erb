@@ -1,11 +1,22 @@
-<h1>Guest#survey</h1>
 
-<p>
+<div class="container">
 
-  Dear <%= @user.first_name %> <%= @user.last_name %>,
-  You are invited to a special occastion your host would like to know
-  if you have........
+  <h1>Food constraint survey</h1>
 
-  Thanks for filling the food survey if necessary.
-  best regards
-</p>
+  <p>
+    Dear <%= @guest.first_name %> <%= @guest.last_name %>,
+    <br>
+    You are invited to a special occasion your host would like to know
+    if you have food constraint for the meal.
+
+    <br>
+    Thanks for filling the food survey if necessary.
+    <br>
+    best regards,
+
+   <%=  link_to "edit form", edit_event_guest_survey_path(@event, @guest, @survey) %>
+
+
+  </p>
+
+</div>

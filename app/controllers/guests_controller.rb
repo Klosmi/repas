@@ -13,7 +13,6 @@ class GuestsController < ApplicationController
     @guest.event = @event
     if @guest.save!
       redirect_to new_event_guest_path(@event), notice: "Guest is saved"
-      Survey.create!(guest_id:@guest.id, event_id:@event.id)
     else
       render :new
     end
