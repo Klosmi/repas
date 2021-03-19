@@ -3,29 +3,30 @@
  <h1>ALL THE EVENTS</h1>
 </div>
 <div class="container">
-  <h2> Current Event</h2>
-  <br>
-  <br>
-  <h2> Event History </h2>
+  <h2 id="currentevent-title"> Current Event</h2>
+    <div class="center-newevent-btn">
+    <%= link_to "Create a new event", new_event_path, class:"new-event-btn" %>
+  </div>
+  <h2 id="eventhistory-title"> Event History </h2>
   <div class= "buttonevent">
-    <div class="wedding"><%= image_tag("https://res.cloudinary.com/dkqxfdutt/image/upload/v1616058616/cc80121335cc2a0e765e32a415c2fbe8_v6nfdy.jpg") %></div>
   <div class= "allevents">
     <% @events.each do |event| %>
       <%= link_to event_path(event) do %>
       <br>
     <div class="firstevent" >
-        <%= event.title  %>
+      <div class="wedding"><%= image_tag("https://res.cloudinary.com/dkqxfdutt/image/upload/v1616058616/cc80121335cc2a0e765e32a415c2fbe8_v6nfdy.jpg") %></div>
+       <div class="card-infos">
+       <%= event.title  %>
         <br>
         <%= event.date %>
+      </div>
     </div>
      <% end %>
          <% end %>
   </div>
   </div>
   <div class="buttonnewevent">
-  <p>
-    <%= link_to "Create a new event", new_event_path %>
-  </p>
+
 </div>
 </div>
 
