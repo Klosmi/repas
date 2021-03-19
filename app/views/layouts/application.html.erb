@@ -25,9 +25,12 @@
 
 
 
+
+
+   
 </head>
 
-<body>
+<body class=" <%='full-page' if controller.action_name == 'home' %> ">
     <%= render 'shared/navbar' %>
     <% if notice %>
     <p class="notice">
