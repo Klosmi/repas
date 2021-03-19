@@ -1,54 +1,166 @@
-/* login and sing button */
-.form-actions:hover{
-  .btn{
-    padding: 5px 110px;
-    background-color: #FFA049;
-    border-radius:100px;
-    color: #FFF;
-  }
-}
-.form-actions{
-  .btn{
-    padding: 5px 110px;
-    background-color: #FCDAA4;
-    border-radius:100px;
-    color: #F27400;
-  }
-}
-.forgotpassword-button:hover{
-  .btn{
-    padding: 5px 20px;
-    background-color: #F27400;
-    border-radius:100px;
-    color: #FFF;
-  }
-}
-.forgotpassword-button{
-  .btn{
-    padding: 5px 20px;
-    background-color: #FCDAA4;
-    border-radius:100px;
-    color: #F27400;
-  }
+/* back button */
+.back-btn:hover {
+    .btn {
+        padding: 5px 110px;
+        background-color: $color-butter;
+        border-radius: 100px;
+        color: $color-orange;
+        text-decoration: none;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        transition-duration: 800ms;
+    }
 }
 
-// button general
+.back-btn {
+    .btn {
+        padding: 5px 110px;
+        background-color: rgb(253, 187, 45);
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        border-radius: 100px;
+        font-weight: 600;
+        color: #FFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition-duration: 800ms;
+    }
+}
+
+/* login and sing button */
+.form-actions:hover {
+    .btn {
+        padding: 5px 110px;
+        background-color: $color-lightorange;
+        border-radius: 100px;
+        color: #FFF;
+    }
+}
+
+.form-actions {
+    .btn {
+        padding: 5px 110px;
+        background-color: $color-butter;
+        border-radius: 100px;
+        color: $color-orange;
+    }
+}
+
+.forgotpassword-button:hover {
+    .btn {
+        padding: 5px 20px;
+        background-color: $color-orange;
+        border-radius: 100px;
+        color: #FFF;
+    }
+}
+
+.forgotpassword-button {
+    .btn {
+        padding: 5px 20px;
+        background-color: $color-butter;
+        border-radius: 100px;
+        color: $color-orange;
+    }
+}
+
+// login button
+
 .login-btn:hover {
-  padding: 5px 50px;
-    background-color: $color-yellow;
-    border-radius:100px;
-    color: $color-orange;
+    padding: 5px 50px;
+    background: rgb(253, 187, 45);
+    background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+    border-radius: 100px;
+    color: #FFF;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition-duration: 800ms;
 }
 
 .login-btn {
-  padding: 5px 50px;
+    padding: 5px 50px;
     background-color: #FFF;
-    border-radius:100px;
+    border-radius: 100px;
     font-weight: 600;
-    color: #F27400;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    color: $color-orange;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition-duration: 800ms;
 }
 
+// events index -> create new event btn
+
+/* create new event button */
+.center-newevent-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-event-btn:hover {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 50px;
+    background: $color-butter;
+    border-radius: 100px;
+    color: $color-orange;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition-duration: 800ms;
+    margin: 20px 0;
+}
+
+.new-event-btn {
+    padding: 5px 50px;
+    background-color: rgb(253, 187, 45);
+    background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+    border-radius: 100px;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition-duration: 800ms;
+    margin: 20px 0;
+}
+
+
+/* form.submit */
+.actions {
+
+    input:hover,
+    button,
+    select,
+    optgroup,
+    textarea {
+        padding: 5px 50px;
+        border-radius: 100px;
+        font-weight: 600;
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        color: $color-orange;
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        transition-duration: 800ms;
+        margin: 20px 0;
+        border: none;
+    }
+}
+
+.actions {
+
+    input,
+    button,
+    select,
+    optgroup,
+    textarea {
+        padding: 5px 50px;
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        border-radius: 100px;
+        font-weight: 600;
+        color: #FFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition-duration: 800ms;
+        margin: 20px 0;
+        border: none;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
