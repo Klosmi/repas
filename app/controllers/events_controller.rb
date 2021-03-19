@@ -31,11 +31,11 @@ class EventsController < ApplicationController
   #     @surveys = Survey.all
   #   end
 
-  #   private
+    private
 
-  #   def event_params
-  #     params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
-  #   end
+    def event_params
+      params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
+    end
 
   # end
   # class preferences < ApplicationController
