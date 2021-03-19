@@ -121,28 +121,8 @@
 }
 
 
-/* form.submit */
-.actions {
-
-    input:hover,
-    button,
-    select,
-    optgroup,
-    textarea {
-        padding: 5px 50px;
-        border-radius: 100px;
-        font-weight: 600;
-        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
-        color: $color-orange;
-        box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-        transition-duration: 800ms;
-        margin: 20px 0;
-        border: none;
-    }
-}
 
 .actions {
-
     input,
     button,
     select,
@@ -157,10 +137,34 @@
         transition-duration: 800ms;
         margin: 20px 0;
         border: none;
+        &:hover {
+            color: $color-orange;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+
+        }
     }
 }
 
 .actions {
     display: flex;
     justify-content: center;
+}
+
+/* show events -> back btn */
+.event-back {
+  a{
+  padding: 5px 50px;
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        border-radius: 100px;
+        font-weight: 600;
+        color: #FFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition-duration: 800ms;
+        margin: 20px 0;
+        border: none;
+        &:hover {
+            color: $color-orange;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+}
+}
 }
