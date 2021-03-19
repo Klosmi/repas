@@ -1,0 +1,57 @@
+.firstevent:hover {
+    & a {
+        color: $color-lightorange;
+    }
+
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    transition-duration: 500ms;
+    border: $color-lightorange solid 1px;
+    border-radius:25px;
+}
+
+.firstevent {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    transition-duration: 500ms;
+    border: #FAFAFA solid 1px;
+    border-radius: 25px;
+}
+
+.firstevent {
+    img {
+        height: 100%;
+        width: 120px;
+        object-fit: cover;
+    }
+}
+
+.firstevent .card-infos {
+    padding: 22px;
+}
+
+.firstevent {
+    margin-bottom: 20px;
+    padding-right: 400px;
+}
+
+.allevents {
+    & a {
+        line-height: 1.4;
+        color: $color-orange;
+        font-size: 22px;
+        text-decoration: none;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-left: 5%;
+        margin-top: 8px;
+    }
+}

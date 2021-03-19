@@ -13,7 +13,7 @@ if Rails.env.development?
   User.destroy_all
 end
 
-user= User.new(email:"lindak15@yahoo.fr", password:"password")
+user= User.new(email:"lindak16@yahoo.fr", password:"password")
 user.save
 
 Event.create!(
