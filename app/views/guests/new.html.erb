@@ -1,21 +1,14 @@
 
 <div class="barreorange">
-</div>
+    <h1><%= @event.title %></h1>
 
-<div>
-  <% @guests.each do |guest| %>
-    <%= guest.first_name %>
-    <%= guest.last_name %>
-    <%= guest.email %>
-    <% survey = guest.surveys.where(event_id:@event.id).first %>
-    <% if survey  %>
-      <%=  link_to "edit form", edit_event_guest_survey_path(@event, guest, survey) %>
-    <% end%>
-  <% end%>
 </div>
+<div class="container">
+
+
 
 <div class="container">
-<h1>here we need to put the form to add guest</h1>
+<h2> Register new guests </h2>
 <%= simple_form_for([@event, @guest]) do |f| %>
    <%= f.input :first_name %>
    <%= f.input :last_name %>
@@ -26,5 +19,40 @@
 </div>
 <br>
 
+<div>
+  <table>
+    <tr>
+      <td>last_name</td>
+      <td>first_name</td>
+      <td>email</td>
+
+  <% @guests.each do |guest| %>
+    <td><%= guest.first_name %></td>
+    <td><%= guest.last_name %></td>
+    <td><%= guest.email %></td>
+    <% survey = guest.surveys.where(event_id:@event.id).first %>
+    <% if survey  %>
+      <%=  link_to "edit form", edit_event_guest_survey_path(@event, guest, survey) %>
+    </tr>
+
+    <% end%>
+  <% end%>
+  </table>
+</div>
+
+
+
+
+
+<br>
+
+
+<br>
+
+
 <br>
 <%= link_to 'Back', events_path %>
+</div>
+
+
+
