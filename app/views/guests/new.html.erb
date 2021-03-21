@@ -1,58 +1,45 @@
-
 <div class="barreorange">
-    <h1><%= @event.title %></h1>
-
+    <h1>
+        <%= @event.title %>
+    </h1>
 </div>
 <div class="container">
-
-
-
-<div class="container">
-<h2> Register new guests </h2>
-<%= simple_form_for([@event, @guest]) do |f| %>
-   <%= f.input :first_name %>
-   <%= f.input :last_name %>
-   <%= f.input :email %>
-   <%= f.submit "create new guest" %>
-<% end %>
-
+    <div class="container">
+        <h2> Register new guests </h2>
+        <%= simple_form_for([@event, @guest]) do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%= f.submit "create new guest" %>
+        <% end %>
+    </div>
+    <br>
+    <div>
+        <table>
+            <tr>
+                <td>last_name</td>
+                <td>first_name</td>
+                <td>email</td>
+                <% @guests.each do |guest| %>
+                <td>
+                    <%= guest.first_name %>
+                </td>
+                <td>
+                    <%= guest.last_name %>
+                </td>
+                <td>
+                    <%= guest.email %>
+                </td>
+                <% survey = guest.surveys.where(event_id:@event.id).first %>
+                <% if survey  %>
+                <%=  link_to "edit form", edit_event_guest_survey_path(@event, guest, survey) %>
+            </tr>
+            <% end%>
+            <% end%>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <%= link_to 'Back', events_path %>
 </div>
-<br>
-
-<div>
-  <table>
-    <tr>
-      <td>last_name</td>
-      <td>first_name</td>
-      <td>email</td>
-
-  <% @guests.each do |guest| %>
-    <td><%= guest.first_name %></td>
-    <td><%= guest.last_name %></td>
-    <td><%= guest.email %></td>
-    <% survey = guest.surveys.where(event_id:@event.id).first %>
-    <% if survey  %>
-      <%=  link_to "edit form", edit_event_guest_survey_path(@event, guest, survey) %>
-    </tr>
-
-    <% end%>
-  <% end%>
-  </table>
-</div>
-
-
-
-
-
-<br>
-
-
-<br>
-
-
-<br>
-<%= link_to 'Back', events_path %>
-</div>
-
-
-

@@ -1,4 +1,111 @@
-// accordionExample{
-// background-color: yellow;
+/* ACCORDION BOOTSTRAP re-styling */
+.survey-title {
+    padding: 30px 0;
+}
 
-// }
+/* text and fonts */
+.survey-h2 {
+    padding-top: 30px;
+}
+
+.accordion h4 {
+    color: #FFF;
+    margin-bottom: -2px;
+}
+
+.accordion-body h4 {
+    color: $color-orange;
+    padding-bottom: 10px;
+}
+
+.form-check-label {
+    color: $color-text;
+}
+
+.accordion-header {
+    margin-bottom: 10px;
+}
+
+.accordion-body {
+    background: linear-gradient(47deg, rgba(255, 255, 255, 1) 0%, rgba(254, 244, 228, 1) 100%);
+    border-radius: 30px;
+}
+
+/* delete the little grey lines on both sides */
+.accordion-collapse {
+    border: none;
+    padding: 10px 0;
+}
+
+/* accordion buttons */
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button.collapsed,
+.accordion-button {
+    background: linear-gradient(32deg, rgba(242, 116, 0, 1) 0%, rgba(192, 44, 105, 1) 88%);
+    border: none;
+    border-radius: 50px;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* accordion button ▲ up */
+.accordion-button:not(.collapsed)::after {
+    background-image: url(_down.png);
+    background-size: 17px 17px;
+    transform: rotate(180deg);
+}
+
+/* accordion button ▼ down */
+.accordion-button::after {
+    background-image: url(_down.png);
+    background-size: 17px 17px;
+}
+
+/* comment textare disable resize */
+.accordion-body textarea {
+    resize: none;
+}
+
+/* comment text styles */
+.accordion-body .form-group {
+  color: $color-orange;
+}
+
+.accordion-body .form-control {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-darkgreen;
+}
+
+.accordion-body .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* submit button ◉ send your form */
+.send-your-from-btn {
+    padding: 5px 50px;
+    background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+    border-radius: 100px;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition-duration: 800ms;
+    margin: 20px 0;
+    border: none;
+
+    &:hover {
+        color: $color-orange;
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+    }
+}
+
+#send-your-from {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
