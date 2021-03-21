@@ -1,0 +1,79 @@
+/* BOOTSTRAP SURVEY REDESIGN */
+
+/* accordion button text + capsule form + background */
+.accordion-item .accordion-header .accordion-button {
+    color: #FFF;
+    font-weight: 800;
+    background: linear-gradient(32deg, rgba(242, 116, 0, 1) 0%, rgba(192, 44, 105, 1) 88%);
+    border: none;
+    border-radius: 100px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 100px;
+}
+
+.accordion-collapse {
+    border: none;
+}
+
+.accordion-body {
+    background: linear-gradient(77deg, rgba(255, 255, 255, 1) 30%, rgba(254, 245, 230, 1) 100%);
+    border-radius: 27px;
+}
+
+.accordion-button:focus {
+    outline: none
+}
+
+.accordion-body h4 {
+    color: $color-orange;
+    padding-bottom: 10px;
+}
+
+
+/* comment title (label) + input form control */
+.accordion-body .survey_comment label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
+    color: $color-orange;
+}
+ .form-control{
+  font-size: 18px;
+  color: $color-darkgreen;
+  font-weight: 600;
+  textarea:focus{
+  outline: none;
+}
+ }
+
+
+/*  down: ▲ button sign */
+.accordion-button:not(.collapsed)::after {
+    background-image: url(_up.png);
+    transform: rotate(180deg);
+}
+
+/* up: ▼ button sign */
+.accordion-button::after {
+    background-image: url(_up.png);
+    background-repeat: no-repeat;
+}
+
+/* gap between the buttons + checkbox-background */
+.accordion-item {
+    padding: 5px 0;
+}
+
+.accordion-collapse {
+    padding: 10px 0;
+}
+
+/* checkbox */
+
+/* submit button center */
+.send-your-form-center {
+    display: flex;
+    justify-content: center;
+}
