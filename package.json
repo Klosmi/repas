@@ -8,6 +8,8 @@
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.6.0",
     "channels": "^0.0.4",
+    "chart.js": "^2.9.4",
+    "chartkick": "^3.2.1",
     "confirmation": "^0.0.5",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",

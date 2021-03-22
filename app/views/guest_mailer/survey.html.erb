@@ -14,7 +14,7 @@
     <br>
     best regards,
 
-   <%=  link_to "edit form", edit_event_guest_survey_path(@event, @guest, @survey) %>
+   <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"http://www.repas.com") %>
 
 
   </p>

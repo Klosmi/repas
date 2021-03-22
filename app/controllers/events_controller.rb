@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.all.reverse
   end
 
   def show
@@ -14,22 +14,22 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    if @event.save
+    if @event.save!
       redirect_to event_path(@event)
     else
       render "new"
     end
-
-
   end
+
   def preferences
     @event = Event.find(params[:event_id])
     @surveys = Survey.where(event_id: @event.id)
+    #@data = @surveys.group(:nut)# :peanut, :shellfish, :egg, :fish, :soy, :celery, :sesame_seed, :milk, :sulphite, :mustard, :gluten, :salt, :sugar, :hallal, :casher, :vegan, :vegetarian).count
+    @data = [
+      ["nut", 32],
+      ["egg", 52]
+    ]
   end
-
-  #   def preferences
-  #     @surveys = Survey.all
-  #   end
 
     private
 
@@ -37,27 +37,11 @@ class EventsController < ApplicationController
       params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
     end
 
-  # end
-  # class preferences < ApplicationController
-  #   def
-  #   end
+  end
 
+  private
 
-  #   def new
-  #     @result = Result.new
-  #   end
-
-  #   def create
-  #     @result = Result.create(params[:result])
-
-  #     if @result.save
-  #       redirect_to @result
-  #     else
-  #       render action: :new
-  #     end
-  #   end
-
-  #   def show
-  #     @result = Result.find(params[:id])
-  #   end
+    def event_params
+      params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
+    end
 end

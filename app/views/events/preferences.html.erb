@@ -1,10 +1,12 @@
 <h1>All guest and form confirmed</h1>
+<%= bar_chart @data %>
 
 <br>
+
 <% @surveys.each do |survey| %>
 <div> <%= survey.guest.first_name %>
 <%= survey.guest.last_name %>
-<%= survey.guest.email %>
+#<%= survey.guest.email %>
 </div>
 <% end %>
 

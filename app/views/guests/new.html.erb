@@ -1,11 +1,19 @@
 
 <div class="barreorange">
     <h1><%= @event.title %></h1>
-
+<div>
+  <% @guests.each do |guest| %>
+    <%= guest.first_name %>
+    <%= guest.last_name %>
+    <%= guest.email %>
+    <% survey = guest.surveys.where(event:@event).first %>
+    <% if survey  %>
+      <%=  link_to "edit form", edit_survey_path(survey) %>
+    <% end%>
+  <% end%>
 </div>
+  
 <div class="container">
-
-
 
 <div class="guestformulaire">
 <h2> Register new guests </h2>
