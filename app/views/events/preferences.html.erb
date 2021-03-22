@@ -1,10 +1,23 @@
-<h1>All guest and form confirmed</h1>
-
-<br>
-<% @surveys.each do |survey| %>
-<div> <%= survey.guest.first_name %>
-<%= survey.guest.last_name %>
-<%= survey.guest.email %>
+<div class="barreorange">
+    <h1>All guest and form confirmed</h1>
 </div>
-<% end %>
-
+<div class="container">
+    <br>
+    <% @surveys.each do |survey| %>
+    <div class="guest-confirmed-name-email">
+        <div class="confirmed-name">
+            <h3 class="guest-confirmed-firstname">
+                <%= survey.guest.first_name %>
+            </h3>
+            <h3 class="guest-confirmed-lastname">
+                <%= survey.guest.last_name %>
+            </h3>
+        </div>
+        <div class="email-confirmed">
+            <h3>
+                <%= survey.guest.email %>
+            </h3>
+        </div>
+    </div>
+    <% end %>
+</div>

@@ -1,0 +1,22 @@
+.guest-confirmed-name-email {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30vw;
+}
+.confirmed-name {
+  display: flex;
+  justify-content: flex-start;
+  color: $color-orange;
+}
+.guest-confirmed-firstname{
+  padding-right: 10px;
+}
+
+.guest-confirmed-lastname{
+   text-transform: uppercase;
+}
+
+.email-confirmed {
+  justify-content: flex-start;
+  color: $color-lightorange;
+}
