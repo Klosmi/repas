@@ -1473,7 +1473,7 @@ bindings@^1.5.0:
 
 blessed@^0.1.81:
   version "0.1.81"
-  resolved "https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz"
+  resolved "https://registry.yarnpkg.com/blessed/-/blessed-0.1.81.tgz#f962d687ec2c369570ae71af843256e6d0ca1129"
   integrity sha1-+WLWh+wsNpVwrnGvhDJW5tDKESk=
 
 block-stream@*:
@@ -2116,7 +2116,7 @@ concat-stream@^1.5.0:
 
 confirmation@^0.0.5:
   version "0.0.5"
-  resolved "https://registry.npmjs.org/confirmation/-/confirmation-0.0.5.tgz"
+  resolved "https://registry.yarnpkg.com/confirmation/-/confirmation-0.0.5.tgz#bf67b365dcd76f06bb2f70255ee5ecdd59fb3cb8"
   integrity sha512-j6iLjT9JyPROvJHa8At2rCeHMHiLiaB2WawTF8oechm4JCdqScnve0j3D2Pum5aK7IdmaffxBuDrD7CU9HWWBQ==
   dependencies:
     blessed "^0.1.81"

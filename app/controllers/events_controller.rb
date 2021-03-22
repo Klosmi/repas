@@ -28,8 +28,14 @@ class EventsController < ApplicationController
     @data = [
       ["nut", 32],
       ["egg", 52]
-
     ]
+  end
+
+    private
+
+    def event_params
+      params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
+    end
 
   end
 

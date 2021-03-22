@@ -1,4 +1,3 @@
-Rails.application.configure do
 
   Rails.application.configure do
 
