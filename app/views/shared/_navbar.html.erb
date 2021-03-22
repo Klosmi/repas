@@ -8,21 +8,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <% if user_signed_in? %>
-            <li class="nav-item active">
-                <%= link_to "Home", root_path, class: "nav-link" %>
+            <li class="nav-item mt-2 text-success">
+                <h5 class="mt-1">
+                    <%= current_user.email %> </h5>
             </li>
-            <li class="nav-item">
-                <%= link_to "Messages", "#", class: "nav-link" %>
+            <li class="userimage">
+                <%= image_tag "user_default.png", class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             </li>
             <li class="nav-item dropdown">
-                <%= image_tag "user_default.png", class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <%= link_to "Action", "#", class: "dropdown-item" %>
                     <%= link_to "Another action", "#", class: "dropdown-item" %>
                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
             </li>
-<!--             <li class="nav-item">
+            <!--             <li class="nav-item">
                 <%= link_to "Login", new_user_session_path, class: "nav-link" %>
             </li> -->
             <% end %>

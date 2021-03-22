@@ -10,7 +10,7 @@ class Guest < ApplicationRecord
   private
 
   def create_invit
-
     Survey.create(guest:self, event:self.event)
   end
+  
 end
