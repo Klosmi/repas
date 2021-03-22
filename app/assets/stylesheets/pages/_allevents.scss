@@ -1,4 +1,4 @@
-.barreorange h1{
+.barreorange h1 {
     color: #FFF;
     text-transform: uppercase;
     padding: 130px 10vw;
@@ -8,14 +8,15 @@ h2 {
     color: $color-lightorange;
 }
 
-#currentevent-title, #eventhistory-title {
-  padding: 20px 0;
+#currentevent-title,
+#eventhistory-title {
+    padding: 20px 0;
 }
 
 .containter {
     display: flex;
     height: 100vh;
-    justify-content:center;
+    justify-content: center;
 }
 
 /* event bars */
@@ -34,74 +35,9 @@ h2 {
     }
 }
 
-// .allevents {
-//   height: 300px;
-//   overflow: scroll;
-//   box-shadow: inset 30px 40px 50px #000;
-//   z-index: 100;
+/* scrolling inside the page */
+// .buttonevent   {
+//   overflow-y: scroll;
+//   height: 50vh;
 // }
 
-
-// .firstevent:hover {
-//     background-color: $color-butter;
-//     color: $color-lightorange;
-//     opacity: 0.90;
-
-//     & a {
-//         color: black;
-//         opacity: 0.90;
-//         text-decoration: none;
-//     }
-// }
-
-
-// .buttonnewevent {
-
-//     padding: 15px;
-//     width: 250px;
-//     height: 60px;
-//     background-color: $color-orange;
-//     border-radius: 30px;
-//     position: relative;
-//     left: 85%;
-//     box-shadow: 1px 1px 2px grey;
-//     // text-align: center;
-//     // text-align-last: right
-// }
-
-// .buttonnewevent p {
-//     position: relative;
-//     left: 30px;
-
-//     & a {
-//         color: white;
-//         font-weight: bold;
-//         opacity: 0.90;
-//         text-decoration: none;
-//     }
-// }
-
-// .buttonnewevent:hover {
-//     background-color: $color-butter;
-//     color: $color-lightorange;
-//     opacity: 0.90;
-
-//     & a {
-//         color: $color-lightorange;
-//         opacity: 0.90;
-//         text-decoration: none;
-//     }
-// }
-
-
-
-
-// .nbranswer {
-//   color:$color-orange;
-//   border: 1px solid $color-orange;
-//   background-color:white;
-//   border-radius: 50%;
-//   width:60px;
-//   text-align: center;
-//   padding: 3px 0px 0px 0px;
-// }
