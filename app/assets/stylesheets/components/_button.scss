@@ -2,7 +2,6 @@
 .back-btn {
     .btn {
         padding: 5px 110px;
-        background-color: rgb(253, 187, 45);
         background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
         border-radius: 100px;
         font-weight: 600;
@@ -11,6 +10,7 @@
         transition-duration: 800ms;
 
         &:hover {
+            background-color: $color-butter;
             color: $color-orange;
             text-decoration: none;
             box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -61,12 +61,12 @@
 
     &:hover {
         background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
-        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        color: #FFF;
         text-decoration: none;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-        color: #FFF;
     }
 }
+
 
 /* create new event button */
 .center-newevent-btn {
@@ -76,6 +76,7 @@
 }
 
 .new-event-btn {
+
     flex-direction: column;
     justify-content: center;
     padding: 5px 50px;
@@ -85,7 +86,7 @@
     font-weight: 600;
     color: #FFF;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transition-duration: 800ms;
+    transition-duration: 400ms;
     margin: 20px 0;
 
     &:hover {
@@ -116,7 +117,6 @@
         &:hover {
             color: $color-orange;
             box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-
         }
     }
 }
@@ -162,5 +162,13 @@
         color: $color-orange;
         box-shadow: 0 0 0px rgba(0, 0, 0, 0);
 
+
+/* events show back button */
+.button-events {
+    color: #FFF;
+
+    &:hover {
+        color: $color-orange;
+        text-decoration: none;
     }
 }
