@@ -1,0 +1,11 @@
+
+<h1>Here all list of guest created</h1>
+<% if @guests.present? %>
+<% @guests.each do |guest| %>
+<div> <%= @event.guest.first_name %>
+<%= @guest.last_name %>
+<%= guest.email %>
+</div>
+<% end %>
+<% end %>
+

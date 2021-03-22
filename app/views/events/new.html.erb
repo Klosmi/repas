@@ -4,41 +4,42 @@
 <div class="container-sm col-12 col-lg-3 mt-5">
     <div class="event-form">
         <%= form_with(model: @event, local: true) do |form| %>
-        <% if @event.errors.any? %>
-        <div id="error_explanation">
-            <h2>
-                <%= pluralize(@event.errors.count, "error") %> ERROR to save this event, please try againt :</h2>
-            <ul>
-                <% @event.errors.full_messages.each do |message| %>
-                <li>
-                    <%= message %>
-                </li>
-                <% end %>
-            </ul>
-        </div>
+          <% if @event.errors.any? %>
+              <div id="error_explanation">
+                  <h2>
+                      <%= pluralize(@event.errors.count, "error") %> ERROR to save this event, please try againt :
+                  </h2>
+                  <ul>
+                      <% @event.errors.full_messages.each do |message| %>
+                        <li>
+                          <%= message %>
+                        </li>
+                      <% end %>
+                  </ul>
+              </div>
+          <% end %>
+          <div class="field">
+              <%= form.label :title, class: "form-text text-warning"%>
+              <%= form.text_field :title, class: "form-control" %>
+          </div>
+          <div class="field">
+              <%= form.label :date, class: "form-text text-warning" %>
+              <%= form.text_field :date, class: "form-control" %>
+          </div>
+          <div class="field">
+              <%= form.label :number_guest, class: "form-text text-warning" %>
+              <%= form.text_field :number_guest, class: "form-control" %>
+          </div>
+          <div class="field">
+              <%= form.label :adress, class: "form-text text-warning" %>
+              <%= form.text_field :adress, class: "form-control" %>
+              <div class="actions">
+                  <%= form.submit %>
+              </div>
+          </div>
         <% end %>
     </div>
-    <div class="field">
-        <%= form.label :title, class: "form-text text-warning"%>
-        <%= form.text_field :title, class: "form-control" %>
-    </div>
-    <div class="field">
-        <%= form.label :date, class: "form-text text-warning" %>
-        <%= form.text_field :date, class: "form-control" %>
-    </div>
-    <div class="field">
-        <%= form.label :number_guest, class: "form-text text-warning" %>
-        <%= form.text_field :number_guest, class: "form-control" %>
-    </div>
-    <div class="field">
-        <%= form.label :adress, class: "form-text text-warning" %>
-        <%= form.text_field :adress, class: "form-control" %>
-        <div class="actions">
-            <%= form.submit %>
-        </div>
-    </div>
-    <% end %>
     <div class="back-btn mt-5">
-        <%= link_to 'Back to events list', events_path, class:"btn" %>
+      <%= link_to 'Back to events list', events_path, class:"btn" %>
     </div>
 </div>

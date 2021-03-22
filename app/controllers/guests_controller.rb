@@ -1,5 +1,8 @@
 class GuestsController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @guest = Guest.all
+  end
 
   def new
     @guest = Guest.new
@@ -11,10 +14,11 @@ class GuestsController < ApplicationController
     @event = Event.find(params[:event_id])
     @guest = Guest.new(guest_params)
     @guest.event = @event
-    if @guest.save!
+    if @guest.save
+      GuestMailer.with(guest:@guest).survey.deliver_now
       redirect_to new_event_guest_path(@event), notice: "Guest is saved"
     else
-      render :new
+      render :index
     end
   end
 
@@ -24,6 +28,6 @@ class GuestsController < ApplicationController
   private
 
   def guest_params
-    params.require(:guest).permit(:first_name, :last_name, :email, :event_id)
+    params.require(:guest).permit(:first_name, :last_name, :email)
   end
 end
