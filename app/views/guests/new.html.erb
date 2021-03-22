@@ -7,9 +7,9 @@
     <%= guest.first_name %>
     <%= guest.last_name %>
     <%= guest.email %>
-    <% survey = guest.surveys.where(event_id:@event.id).first %>
+    <% survey = guest.surveys.where(event:@event).first %>
     <% if survey  %>
-      <%=  link_to "edit form", edit_event_guest_survey_path(@event, guest, survey) %>
+      <%=  link_to "edit form", edit_survey_path(survey) %>
     <% end%>
   <% end%>
 </div>
