@@ -39,5 +39,11 @@
     width: 30px;
 }
 
-
-
+/* logout text */
+.logout-item {
+  color: $color-lightorange;
+  &:hover {
+    text-decoration: none;
+    color: $color-orange;
+  }
+}

@@ -1,3 +1,11 @@
+/* navbar toggler (hamburger button) -> mobile view */
+.navbar-toggler {
+    border-radius: 100px;
+}
+.navbar-light .navbar-toggler {
+    border: solid 2px rgba(44, 66, 61, 0.7);
+}
+
 /* back button */
 .back-btn {
     .btn {
@@ -161,7 +169,7 @@
     &:hover {
         color: $color-orange;
         box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-}
+    }
 }
 
 /* events show back button */
