@@ -11,14 +11,12 @@ class Guest < ApplicationRecord
 private
 
   def send_survey_email
-    GuestMailer.with(guest: self, event:self.event, survey:self.survey.last).survey.deliver_now
+    GuestMailer.with(guest: self, event:self.event, survey:self.surveys.last).survey.deliver_now
   end
 
   def create_survey
     Survey.create!(guest_id:self.id, event_id:self.event.id)
   end
-
-
 
 end
 
