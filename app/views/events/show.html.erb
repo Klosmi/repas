@@ -5,67 +5,48 @@
 </div>
 <div class="container">
     <div class="event-info">
-        <div class="carres">
+        <div class="carres-flex1">
             <div class="firstcarre">
-                <div class="firstimage">
-                    <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222263/undraw_events_2p66_ofigu3.svg">
-                </div>
-                <div class="firsttext">
-                    <p>
-                        <%= @event.date %>
-                    </p>
-                </div>
-            </div>
-            <div class="secondcarre">
-                <div class="secondimage">
-                    <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222542/address_ltx6hy.svg">
-                </div>
-                <div class="secondtext">
-                    <p>
-                        <%= @event.address %>
-                    </p>
-                </div>
-            </div>
-            <div class="thirtcarre">
-                <div class="thirtimage">
-                    <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223290/people_vr3emg.svg">
-                </div>
-                <div class="thirttext">
-                    <p>
-                        <%= @event.number_guest %> guests</p>
-                </div>
-            </div>
-        </div>
-        <div class="moreinfo">
-            <div class="stat">
-                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223323/stat_heyhq7.svg">
-            </div>
-            <div class="lienstat">
-                <!--         <div class="flecheimg"><img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616224697/fleche_olr1yn.jpg"></div>
- -->
+                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222263/undraw_events_2p66_ofigu3.svg">
                 <p>
-                    <%= link_to "More information about the guest survey", event_preferences_path(@event.id) %>
+                    <%= @event.date %>
                 </p>
             </div>
-            <!-- <div classe="nbranswer"><p>42</p></div> -->
+            <div class="secondcarre">
+                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222542/address_ltx6hy.svg">
+                <p>
+                    <%= @event.address %>
+                </p>
+            </div>
+        </div>
+        <div class="carres-flex2">
+            <div class="thirdcarre">
+                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223290/people_vr3emg.svg">
+                <p>
+                    <%= @event.number_guest %> guests
+                </p>
+            </div>
+            <div class="moreinfo">
+                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223323/stat_heyhq7.svg">
+                <p>
+                    <%= link_to "More information about the guest survey", event_preferences_path(@event.id), class:"show-events-btn" %>
+                </p>
+            </div>
+        </div>
+        <div class="twolink">
+    <div class="backtaille">
+        <div class="back-btn">
+            <%= link_to"Back to events", events_path, class:"btn" %>
+        </div>
+    </div>
+    <br>
+    <div class="registertaille">
+        <div class="back-btn">
+            <%= link_to"Register guests", new_event_guest_path(@event.id), class:"btn" %>
+            <br>
         </div>
     </div>
 </div>
-<br>
-<div class="twolink">
-    <div class="back-btn">
-        <div class="btn">
-            <div class="backtaille">
-                <%= link_to"Back to events", events_path, class:"button-events" %>
-            </div>
-        </div>
-        <br>
-        <div class="btn">
-            <div class="registertaille">
-                <%= link_to"register guests", new_event_guest_path(@event.id), class:"button-events" %>
-                <br>
-            </div>
-        </div>
     </div>
 </div>
-<br>
+
