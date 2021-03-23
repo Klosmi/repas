@@ -7,7 +7,7 @@ class GuestsController < ApplicationController
   def new
     @guest = Guest.new
     @event = Event.find(params[:event_id])
-    @guests = @event.guests
+    @guests = @event.guests.order(created_at: :desc)
   end
 
   def create
