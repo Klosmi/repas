@@ -1,44 +1,46 @@
-body{
-background: rgb(238,232,219);
-background: linear-gradient(70deg, rgba(238,232,219,1) 0%, rgba(252,252,252,1) 100%);
+body {
+    background: linear-gradient(70deg, rgba(238, 232, 219, 1) 0%, rgba(252, 252, 252, 1) 100%);
 }
 
 .signup-container {
-  display: flex;
-  width: 60%;
-  margin: 0 auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 /* text */
 .signup-container .signup_title {
-  overflow: auto;
-  color: $color-lightorange;
-  font-weight: bold;
-}
-.signup-title{
-  text-align: left;
-  margin-top: 50px;
+    overflow: auto;
+    color: $color-lightorange;
+    font-weight: bold;
 }
 
-.form-inputs{
-  margin: 20px auto;
+.signup-title {
+    text-align: left;
+    margin-top: 50px;
+    color: $color-orange;
+}
+
+.form-inputs {
+    margin: 20px auto;
 }
 
 .form-group {
-  color: $color-text;
+    color: $color-text;
 }
-.form-check-label{
-  color: $color-text;
+
+.form-check-label {
+    color: $color-text;
 }
 
 /* required asterisk */
 .required {
-  abbr{
-  text-decoration: none;
-  color: $color-lightorange;
-}
+    abbr {
+        text-decoration: none;
+        color: $color-lightorange;
+    }
 }

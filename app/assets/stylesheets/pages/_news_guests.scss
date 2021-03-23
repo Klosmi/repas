@@ -66,12 +66,10 @@
     color: $color-orange;
 }
 
-
-tr:hover td {
+    &:hover {
     background-color: $color-orange;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 800;
     color: white;
-
 }
