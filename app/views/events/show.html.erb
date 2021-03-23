@@ -18,9 +18,9 @@
                     <%= @event.address %>
                 </p>
             </div>
-           </div>
-            <div class="carres-flex2">
-            <div class="thirtcarre">
+        </div>
+        <div class="carres-flex2">
+            <div class="thirdcarre">
                 <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223290/people_vr3emg.svg">
                 <p>
                     <%= @event.number_guest %> guests
@@ -33,23 +33,20 @@
                 </p>
             </div>
         </div>
-    </div>
-</div>
-<br>
-<div class="twolink">
-    <div class="back-btn">
-        <div class="btn">
-            <div class="backtaille">
-                <%= link_to"Back to events", events_path, class:"button-events" %>
-            </div>
+        <div class="twolink">
+    <div class="backtaille">
+        <div class="back-btn">
+            <%= link_to"Back to events", events_path, class:"btn" %>
         </div>
-        <br>
-        <div class="btn">
-            <div class="registertaille">
-                <%= link_to"register guests", new_event_guest_path(@event.id), class:"button-events" %>
-                <br>
-            </div>
+    </div>
+    <br>
+    <div class="registertaille">
+        <div class="back-btn">
+            <%= link_to"Register guests", new_event_guest_path(@event.id), class:"btn" %>
+            <br>
         </div>
     </div>
 </div>
-<br>
+    </div>
+</div>
+

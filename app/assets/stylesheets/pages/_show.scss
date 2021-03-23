@@ -3,8 +3,8 @@
     justify-content: center;
 }
 
-
-.carres-flex1, .carres-flex2 {
+.carres-flex1,
+.carres-flex2 {
     display: flex;
     justify-content: center;
 }
@@ -13,9 +13,10 @@
     width: 280px;
     height: 220px;
     border-radius: 10px;
-    margin: 0px 20px 0px 0px;
     border: 1px solid $color-orange;
     font-size: 20px;
+    text-align: center;
+    margin: 10px;
 
     img {
         width: 280px;
@@ -23,9 +24,7 @@
         padding: 10px 5px 0px 5px;
     }
 
-    .show-events-btn {
-        text-align: center;
-    }
+    .show-events-btn {}
 }
 
 .firstcarre {
@@ -33,9 +32,9 @@
     width: 280px;
     height: 220px;
     border-radius: 10px;
-    margin: 0px 20px 0px 0px;
     border: 1px solid $color-orange;
     font-size: 20px;
+    margin: 10px;
 
     p {
         font-family: 'Montserrat', sans-serif;
@@ -44,6 +43,7 @@
         text-align: left;
         color: $color-orange;
         margin: 20px;
+        text-align: center;
     }
 
     img {
@@ -58,8 +58,8 @@
     width: 280px;
     height: 220px;
     border-radius: 10px;
-    margin: 0px 20px 0px 0px;
     border: 1px solid $color-orange;
+    margin: 10px;
 
     p {
         font-family: 'Montserrat', sans-serif;
@@ -77,13 +77,13 @@
     }
 }
 
-.thirtcarre {
+.thirdcarre {
     // box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.1);
     width: 280px;
     height: 220px;
     border-radius: 10px;
-    margin: 0px 20px 0px 0px;
     border: 1px solid $color-orange;
+    margin: 10px;
 
     p {
         font-family: 'Montserrat', sans-serif;
@@ -101,45 +101,44 @@
     }
 }
 
-
 /* buttons */
-.back-btn {
+.twolink {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin: 0 20px;
+    align-items: center;
+    padding: 0 40px;
+
+    .back-btn .btn {
+        padding:12px 30px;
+    }
 }
 
-.backtaille {
-    width: 100px;
-    height: 40px;
+
+
+/* mobile view */
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+  .event-info{
     display: flex;
-    flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+    .carres-flex1,
+    .carres-flex2 {
+        display: flex;
+         flex-wrap: wrap;
+        .moreinfo, .firstcarre, .secondcarre, .thirdcarre {
+          margin: 5px;
+        }
+    }
+
+    .twolink {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .back-btn .btn {
+        padding: 10px 50px;
+    }
 }
-
-.registertaille {
-    padding: 7px 0;
 }
-
-// .nbranswer {
-//   color:$color-orange;
-//   border: 1px solid $color-orange;
-//   background-color:yellow;
-//   border-radius: 50%;
-//   width:80px;
-//   height:80px;
-//   text-align: center;
-//   padding: 3px 0px 0px 0px;
-// }
-
-
-// .number_guest {
-//    color: $color-orange;
-//    border: 1px solid $color-orange;
-//    background-color:white;
-//    border-radius: 50%;
-//    width: 60px;
-//    height: 60px;
-//    text-align: center;
-//    padding: 15px 0px 0px 0px;
-//  }
