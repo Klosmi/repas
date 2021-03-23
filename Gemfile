@@ -26,6 +26,7 @@ gem 'devise'
 
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem "chartkick"
+gem 'mailgun-ruby', '~>1.2.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
