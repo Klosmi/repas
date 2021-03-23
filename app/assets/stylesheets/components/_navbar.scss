@@ -47,3 +47,19 @@
     color: $color-orange;
   }
 }
+
+
+/* navbar toggler (hamburger button) -> mobile view */
+.navbar-toggler {
+    border-radius: 100px;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+    &:hover{
+      border: none;
+    }
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+  outline:none;
+}
