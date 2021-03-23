@@ -77,18 +77,19 @@ align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 1000;
-    color: $color-orange;
-}
+    color: $color-orange
 
-
-tr:hover td {
+    &:hover {
     background-color: $color-orange;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 1000;
     color: white;
-
 }
+}
+
+
+
 
 
 
