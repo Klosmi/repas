@@ -41,11 +41,12 @@
 
 /* logout text */
 .logout-item {
-  color: $color-lightorange;
-  &:hover {
-    text-decoration: none;
-    color: $color-orange;
-  }
+    color: $color-lightorange;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-orange;
+    }
 }
 
 
@@ -53,13 +54,16 @@
 .navbar-toggler {
     border-radius: 100px;
 }
+
 .navbar-light .navbar-toggler {
     border: none;
-    &:hover{
-      border: none;
+
+    &:hover {
+        border: none;
     }
 }
 
-.navbar-toggler:focus, .navbar-toggler:hover {
-  outline:none;
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    outline: none;
 }
