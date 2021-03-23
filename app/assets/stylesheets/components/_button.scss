@@ -25,6 +25,8 @@
         background-color: $color-butter;
         border-radius: 100px;
         color: $color-orange;
+        transition-duration: 500ms;
+        font-weight: 500;
 
         &:hover {
             background-color: $color-lightorange;

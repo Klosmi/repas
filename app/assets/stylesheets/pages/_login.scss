@@ -34,3 +34,7 @@ background: linear-gradient(70deg, rgba(238,232,219,1) 0%, rgba(252,252,252,1) 1
 .form-check-label{
   color: $color-text;
 }
+
+.email, .password {
+  color: $color-orange;
+}
