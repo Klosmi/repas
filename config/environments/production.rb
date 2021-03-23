@@ -2,7 +2,7 @@
   Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "https://repas-2021.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "https://www.customfood.me" }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
