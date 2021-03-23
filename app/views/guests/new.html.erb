@@ -2,64 +2,72 @@
     <h1>
         <%= @event.title %>
     </h1>
-    <div class="container-registered">
-        <div class="will-be-hidden">
-            <% @guests.each do |guest| %>
-            <%= guest.first_name %>
-            <%= guest.last_name %>
-            <%= guest.email %>
-            <% survey = guest.surveys.where(event:@event).first %>
-            <% if survey  %>
-            <%=  link_to "edit form", edit_survey_path(survey) %>
-            <% end%>
-            <% end%>
-        </div>
-        <!-- FORM -->
-        <div class="guestformulaire">
-            <h2> Register new guests </h2>
-            <%= simple_form_for([@event, @guest]) do |f| %>
-            <%= f.input :first_name %>
-            <%= f.input :last_name %>
-            <%= f.input :email %>
-        </div>
-        <!-- BUTTON -->
-        <div class="back-btn">
-            <%= f.submit "create new guest", class: "btn"  %>
-        </div>
-        <% end %>
-        <br>
-        <!-- BUTTON -->
-        <div class="registered-back">
-            <div class="back-btn">
-                <%= link_to 'Back', events_path, class: "btn" %>
+    <div class="container">
+        <div class="row">
+            <div class="will-be-hidden  d-none">
+                <% @guests.each do |guest| %>
+                <%= guest.first_name %>
+                <%= guest.last_name %>
+                <%= guest.email %>
+                <% survey = guest.surveys.where(event:@event).first %>
+                <% if survey  %>
+                <%=  link_to "edit form", edit_survey_path(survey) %>
+                <% end%>
+                <% end%>
+            </div>
+            <!-- FORM -->
+            <div class="block mt-6 mt-md-0 ">
+                <h2 class="d-flex justify-content-center mt-5 mt-md-0"> Register new guests </h2>
+                <div class="col-12 d-flex justify-content-center guestformulaire">
+                    <%= simple_form_for ([@event, @guest]) do |f| %>
+                    <%= f.input :first_name %>
+                    <%= f.input :last_name %>
+                    <%= f.input :email %>
+                </div>
+                <!-- BUTTON -->
+                <div class="back-btn d-flex justify-content-center">
+                    <%= f.submit "create new guest", class: "btn-guest"  %>
+                </div>
+                <% end %>
+                <br>
+                <!-- BUTTON -->
+                <div class="d-flex justify-content-center registered-back pt-0 pt-md-5">
+                    <div class="back-btn">
+                        <%= link_to 'Back', events_path, class: "btn" %>
+                    </div>
+                </div>
+                <!-- TABLE TITLE-->
+                <div class="table-main-title">
+                    <h2 class="d-flex justify-content-center"> List of registered guests </h2>
+                </div>
+                <!-- TABLE -->
+                    <table class="table">
+                        <thead>
+                            <th class="fname-head">First name</th>
+                            <th class="lname-head">Last name</th>
+                            <th id="email-head">Email</th>
+                        </thead>
+                        <% @guests.each do |guest| %>
+                        <tbody>
+                            <tr>
+                                <td class="fname-cell text-wrap ">
+                                    <%= guest.first_name %>
+                                </td>
+                                <td class="lname-cell text-wrap ">
+                                    <%= guest.last_name %>
+                                </td>
+                                <td class="email-cell text-wrap">
+                                    <%= guest.email %>
+                                </td>
+                                <% survey = guest.surveys.where(event_id:@event.id).first %>
+                                <% if survey  %>
+                                <%  link_to "edit form", edit_survey_path(survey) %>
+                            </tr>
+                            <% end%>
+                            <% end%>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <!-- TABLE TITLE-->
-        <div class="table-main-title">
-            <h2> List of registered guests </h2>
-        </div>
-        <!-- TABLE -->
-        <div class="table-body">
-            <table class="table-bordered">
-                <tbody>
-                    <thead>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Email</th>
-                    </thead>
-                    <% @guests.each do |guest| %>
-                    <tr>
-                        <td> <%= guest.first_name %> </td>
-                        <td> <%= guest.last_name %> </td>
-                        <td> <%= guest.email %> </td>
-                        <% survey = guest.surveys.where(event_id:@event.id).first %>
-                        <% if survey  %>
-                        <%  link_to "edit form", edit_survey_path(survey) %>
-                    </tr>
-                    <% end%>
-                    <% end%>
-                </tbody>
-            </table>
-        </div>
     </div>
-</div>

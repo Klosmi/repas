@@ -1,14 +1,15 @@
-.container-registered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .container-registered {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
-
-.guestformulaire {
+/* form */
+#new_guest {
     width: 50vw;
 }
 
+/* table */
 .table-registered {
     display: flex;
     justify-content: center;
@@ -23,21 +24,13 @@
     }
 }
 
-.formactions {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: $color-orange;
-}
-
 .titletb h2 {
     text-align: center;
     padding: 10px 0;
 }
 
 .table-bordered {
-    width: 700px;
-    height: 180px;
+    // width: 100vw;
     border: 1px solid white;
     border-collapse: collapse;
     background-color: $color-butter;
@@ -45,31 +38,61 @@
 }
 
 .table-bordered th {
-
-    height: 10px;
+    // height: 10px;
     border: 1px solid white;
     background-color: $color-orange;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
+    // font-family: 'Montserrat', sans-serif;
+    // font-size: 20px;
+    // font-weight: 800;
     color: white;
 }
 
-.table-bordered tr {
+.table tr {
     border: 1px solid white;
     background-color: $color-butter;
-    font-size: small;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
+    // font-family: 'Montserrat', sans-serif;
+    // font-size: 16px;
+    // font-weight: 800;
     color: $color-orange;
 
     &:hover {
         background-color: $color-orange;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        font-weight: 800;
+        // font-family: 'Montserrat', sans-serif;
+        // font-size: 16px;
+        // font-weight: 800;
         color: white;
     }
+}
+
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+    #new_guest {
+        width: 70vw;
+    }
+
+    #email-head {
+        padding: 10px 80px;
+        font-size: 15px;
+    }
+
+    .fname-head, .lname-head {
+        padding: 10px 20%;
+        font-size: 15px;
+    }
+
+    td {
+        word-wrap: break-word;
+        max-width: 1px;
+        font-size: 14px;
+      .fname-cell, .lname-cell {
+        padding:5% 20%;
+      }
+
+  td  .email-cell{
+         padding:5% 60%;
+      }
+
+    }
+
+
 }
