@@ -6,7 +6,7 @@
 .form-actions:hover {
     btn {
         padding: 5px 110px;
-        background-color: #FFA049;
+        background-color: $color-lightorange;
         border-radius: 100px;
         color: #FFF;
     }
@@ -15,8 +15,8 @@
 .form-actions {
   btn{
         padding: 5px 110px;
-        background-color: #FCDAA4;
+        background-color: $color-orange;
         border-radius: 100px;
-        color: #F27400;
+        color: $color-orange;
     }
 }
