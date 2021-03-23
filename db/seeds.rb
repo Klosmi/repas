@@ -65,30 +65,35 @@ Event.create!(
          user_id: user.id
          )
 
- 500.times do
+ 200.times do
   event = Event.all.sample
-  guest = Guest.create!(event_id:event.id, first_name:Faker::Name.first_name , last_name:Faker::Name.last_name, email:Faker::Internet.email)
+  guest = Guest.create!(event:event, first_name:Faker::Name.first_name , last_name:Faker::Name.last_name, email:Faker::Internet.email)
+  stat25= [true, false, false, false]
+  stat= [true]
+  stat5= [24.times{stat<<false}, stat].flatten
+  stat1= [97.times{stat<<false}, stat].flatten
 
   Survey.create!(
-    nut: [true, false].sample,
-    peanut: [true, false].sample,
-    shellfish: [true, false].sample,
-    egg: [true, false].sample,
-    fish: [true, false].sample,
-    soy: [true, false].sample,
-    celery: [true, false].sample,
-    sesame_seed: [true, false].sample,
-    milk: [true, false].sample,
-    sulphite: [true, false].sample,
-    mustard: [true, false].sample,
-    gluten: [true, false].sample,
-    salt: [true, false].sample,
-    sugar: [true, false].sample,
-    hallal: [true, false].sample,
-    casher: [true, false].sample,
-    vegan: [true, false].sample,
-    vegetarian: [true, false].sample,
+    nut: stat5.sample,
+    peanut: stat5.sample,
+    shellfish: stat5.sample,
+    egg: stat1.sample,
+    fish: stat5.sample,
+    soy: stat5.sample,
+    celery: stat5.sample,
+    sesame_seed: stat5.sample,
+    milk: stat1.sample,
+    sulphite: stat5.sample,
+    mustard: stat1.sample,
+    gluten: stat5.sample,
+    salt: stat1.sample,
+    sugar: stat5.sample,
+    hallal: stat5.sample,
+    casher: stat5.sample,
+    vegan: stat1.sample,
+    vegetarian: stat1.sample,
     comment:"Please no #{Faker::Dessert.variety}",
-    event_id: event.id ,
-    guest_id: guest.id )
+    event: event ,
+    guest: guest
+  )
 end
