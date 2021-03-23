@@ -3,20 +3,28 @@
 
   <h1>Food constraint survey</h1>
 
+
+                                            <%= Time.new %>
+
+
   <p>
     Dear <%= @guest.first_name %> <%= @guest.last_name %>,
     <br>
-    You are invited to a special occasion your host would like to know
-    if you have food constraint for the meal.
+    I am delighted to tell you, that your host is looking forward to see you.
+    Your host gave us your email to know if you have food constraint for the meal.
+    you can find enclosed a survey.
 
     <br>
     Thanks for filling the food survey if necessary.
     <br>
     best regards,
+    <br>
+
 
    <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"https://www.customfood.me") %>
+    <br>
 
-
+   your host
   </p>
 
 </div>
