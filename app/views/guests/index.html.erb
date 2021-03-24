@@ -6,6 +6,11 @@
 <%= @guest.last_name %>
 <%= guest.email %>
 </div>
+<% @event.guests.each do |guest| %>
+    <%= link_to "<i class=\"far fa-trash-alt\"></i>".html_safe, dose_path(dose), method: :destroy, data: {confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+
 <% end %>
 <% end %>
 

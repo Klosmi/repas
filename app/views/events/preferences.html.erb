@@ -3,22 +3,21 @@
 </div>
 <%= column_chart @data %>
 <div class="container">
-    <br>
-
-    <div class="accordion" id="accordionExample">
-      <% @surveys.each do |survey| %>
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <%= survey.guest.first_name %>  <%= survey.guest.last_name %>
-        </button>
-      </h3>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong><%= survey.comment %></strong>
+  <br>
+  <div class="accordion" id="accordionExample">
+    <% @surveys.each do |survey| %>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne<%=  survey.id %>" aria-expanded="true" aria-controls="collapseOne<%=  survey.id %>">
+            <%= survey.guest.first_name %>  <%= survey.guest.last_name %>
+          </button>
+        </h3>
+        <div id="collapseOne<%=  survey.id %>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong><%= survey.comment %></strong>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
-    </div>
+  </div>
 </div>

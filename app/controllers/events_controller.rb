@@ -47,6 +47,13 @@ class EventsController < ApplicationController
       ["vegan", @surveys.where(vegan: true).count],
       ["vegetarian", @surveys.where(vegetarian: true).count]
     ]
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render  pdf: "file_name",
+                layout: 'pdf.html.erb' # Excluding ".pdf" extension.
+      end
+    end
   end
 
   private
@@ -54,8 +61,6 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
   end
-
-  private
 
   def event_params
     params.require(:event).permit(:title, :date, :number_guest, :address, :user_id)
