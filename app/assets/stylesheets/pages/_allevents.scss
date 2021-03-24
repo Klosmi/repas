@@ -1,17 +1,14 @@
-h2 {
-    color: $color-lightorange;
-}
-
-#currentevent-title,
-#eventhistory-title {
-    padding: 20px 0;
-}
-
 .containter-event {
     display: flex;
     height: 100vh;
     justify-content: center;
 }
+
+/*  create button */
+.center-newevent-btn {
+  padding: 20px 0;
+}
+
 
 /* event bars */
 .buttonevent {
@@ -28,9 +25,17 @@ h2 {
         font-weight: 400;
     }
 }
-
-/* scrolling inside the page */
 .buttonevent   {
   overflow-y: scroll;
-  height: 50vh;
+  height: 60vh;
+}
+
+/* scrolling inside the page */
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+.buttonevent   {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
 }

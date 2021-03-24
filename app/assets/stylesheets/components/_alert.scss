@@ -1,20 +1,26 @@
 .alert {
     padding: fixed;
-    top: -6.5%;
-    left: 50%;
-    margin-left: -130px;
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    text-align: center;
     z-index: 2000;
     font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
     color: #577C73;
   }
 @media (max-width: 600px) {
   .alert {
-    top: -9.4%;
+    position: absolute;
+    top: 2%;
+    left: 33%;
+    font-style: italic;
+    font-weight: 600;
     font-size: 14px;
     width: 150px;
     text-align: center;
-    left: 65%;
     padding: 2px;
-
+    color: #577C73;
   }
 }
