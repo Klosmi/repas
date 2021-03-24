@@ -68,14 +68,14 @@
                                     </td>
                                     <td class="email-cell text-wrap">
                                         <%= guest.email %>
-                                    </td>
-                                    <td>
+                                                        <div class="trash d-flex justify-content-end ">
                                         <% survey = guest.surveys.where(event_id:@event.id).first %>
                                         <% if survey  %>
                                         <%  link_to "edit form", edit_survey_path(survey) %>
                                         <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
                                         <i class="far fa-trash-alt"></i>
                                         <% end %>
+                                  </div>
                                     </td>
                                 </tr>
                                 <% end%>
