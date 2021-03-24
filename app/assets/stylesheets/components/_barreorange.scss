@@ -1,17 +1,12 @@
-html,
-body {
+html {
     margin: 0;
     padding: 0;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-}
-
-* {
-    box-sizing: border-box;
-}
+// body {
+//     height: 100vh;
+//     width: 100vw;
+// }
 
 .barreorange {
     background: rgb(253, 187, 45);
@@ -33,11 +28,10 @@ body {
 @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     .barreorange {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
 
         h1 {
-            align-items: center;
-            margin: 0 auto;
+            justify-content: center;
             font-size: 30px
         }
     }
