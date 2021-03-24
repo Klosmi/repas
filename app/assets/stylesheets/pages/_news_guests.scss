@@ -9,13 +9,12 @@
     width: 50vw;
 }
 
-/* table */
-.table-registered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form-control:focus {
+text-decoration: none;
+box-shadow: none;
 }
 
+/* button */
 .registered-back {
     padding: 20px 0;
 
@@ -23,47 +22,54 @@
         padding: 5px 160px;
     }
 }
+/* table */
+// .table-registered {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+.table {
+  border: none;
+}
+
 
 .titletb h2 {
     text-align: center;
     padding: 10px 0;
 }
 
-.table-bordered {
-    // width: 100vw;
-    border: 1px solid white;
-    border-collapse: collapse;
-    background-color: $color-butter;
-    text-align: center;
-}
+// .table-bordered {
+//     border: 1px solid white;
+//     border-collapse: collapse;
+//     background-color: $color-butter;
+//     text-align: center;
+// }
 
-.table-bordered th {
-    // height: 10px;
-    border: 1px solid white;
-    background-color: $color-orange;
-    // font-family: 'Montserrat', sans-serif;
-    // font-size: 20px;
-    // font-weight: 800;
-    color: white;
-}
+// .table-bordered th {
+//     // height: 10px;
+//     border: 1px solid white;
+//     background-color: $color-orange;
+//     font-family: 'Montserrat', sans-serif;
+//     color: white;
+// }
 
-.table tr {
-    border: 1px solid white;
-    background-color: $color-butter;
-    // font-family: 'Montserrat', sans-serif;
-    // font-size: 16px;
-    // font-weight: 800;
-    color: $color-orange;
+// tr:nth-child(even) {
+//     background-color: $color-yellow;
+// }
 
-    &:hover {
-        background-color: $color-orange;
-        // font-family: 'Montserrat', sans-serif;
-        // font-size: 16px;
-        // font-weight: 800;
-        color: white;
-    }
-}
+// tr {
+//     border: 1px solid white;
+//     background-color: $color-butter;
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 600;
+//     color: $color-orange;
 
+//     &:hover {
+//         background-color: $color-orange;
+//         font-family: 'Montserrat', sans-serif;
+//         color: white;
+//     }
+// }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     #new_guest {
@@ -75,7 +81,8 @@
         font-size: 15px;
     }
 
-    .fname-head, .lname-head {
+    .fname-head,
+    .lname-head {
         padding: 10px 20%;
         font-size: 15px;
     }
@@ -84,13 +91,15 @@
         word-wrap: break-word;
         max-width: 1px;
         font-size: 14px;
-      .fname-cell, .lname-cell {
-        padding:5% 20%;
-      }
 
-  td  .email-cell{
-         padding:5% 60%;
-      }
+        .fname-cell,
+        .lname-cell {
+            padding: 5% 20%;
+        }
+
+        td .email-cell {
+            padding: 5% 60%;
+        }
 
     }
 
