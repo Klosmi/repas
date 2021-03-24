@@ -2,6 +2,7 @@
     <h1>
         <%= @event.title %>
     </h1>
+
     <div>
         <% @guests.each do |guest| %>
         <%= guest.first_name %>
@@ -14,6 +15,7 @@
         <% end%>
     </div>
     <div class="container">
+
         <div class="guestformulaire">
             <h2> Register new guests </h2>
             <%= simple_form_for([@event, @guest]) do |f| %>
@@ -29,6 +31,14 @@
                 <div class="titletb">
                     <h2> List of registered guests </h2>
                 </div>
+                <%= form_tag new_event_guest_path(@event), method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a guest"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
                 <table class="table table-bordered">
                     <tbody>
                         <thead>
@@ -51,6 +61,9 @@
                                 <% survey = guest.surveys.where(event_id:@event.id).first %>
                                 <% if survey  %>
                                 <%  link_to "edit form", edit_survey_path(survey) %>
+                                <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
+                                  <i class="far fa-trash-alt"></i>
+                                <% end %>
                             </td>
                         </tr>
                         <% end%>

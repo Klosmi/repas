@@ -7,7 +7,13 @@ class GuestsController < ApplicationController
   def new
     @guest = Guest.new
     @event = Event.find(params[:event_id])
-    @guests = @event.guests
+    if params[:query].present?
+      sql_query = "first_name ILIKE :query OR email ILIKE :query OR last_name ILIKE :query"
+      @guests = @event.guests.where(sql_query, query: "%#{params[:query]}%")
+    else
+     @guests = @event.guests
+
+    end
   end
 
   def create
@@ -20,6 +26,7 @@ class GuestsController < ApplicationController
     else
       render :index
     end
+
   end
 
   def edit
@@ -30,9 +37,11 @@ class GuestsController < ApplicationController
   end
 
   def destroy
+
     @guest = Guest.find(params[:id])
+    @event = @guest.event
     @guest.destroy
-    redirect_to guest_path(@guest.event)
+    redirect_to new_event_guest_path(@event)
   end
 
   def confirmation
