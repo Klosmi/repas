@@ -10,8 +10,8 @@
 }
 
 .form-control:focus {
-text-decoration: none;
-box-shadow: none;
+    text-decoration: none;
+    box-shadow: none;
 }
 
 /* button */
@@ -22,14 +22,16 @@ box-shadow: none;
         padding: 5px 160px;
     }
 }
+
 /* table */
 .table-registered {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .table {
-  border: none;
+    border: none;
 }
 
 
@@ -83,22 +85,22 @@ tr {
 
     .fname-head,
     .lname-head {
-        padding: 10px 20%;
+        padding: 10px 15%;
         font-size: 15px;
     }
 
     td {
         word-wrap: break-word;
         max-width: 1px;
-        font-size: 14px;
+        font-size: 10px;
 
         .fname-cell,
         .lname-cell {
-            padding: 5% 20%;
+            padding: 5% 1 5%;
         }
 
         td .email-cell {
-            padding: 5% 60%;
+            padding: 5% 50%;
         }
 
     }

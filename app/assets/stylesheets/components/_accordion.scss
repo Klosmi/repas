@@ -31,6 +31,11 @@
     padding-bottom: 10px;
 }
 
+/* textare resize stop */
+textarea.form-control {
+    resize: none;
+  }
+
 
 /* comment title (label) + input form control */
 .accordion-body .survey_comment label {

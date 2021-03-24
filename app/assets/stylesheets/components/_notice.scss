@@ -1,7 +1,27 @@
 .notice {
-  display:flex;
-  justify-content: space-around;
-  z-index: 2000;
-  color: #577C73;
+    padding: fixed;
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    text-align: center;
+    z-index: 2000;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: $color-yellow;
   }
+@media (max-width: 600px) {
+  .notice {
+    position: absolute;
+    top: 2%;
+    left: 33%;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 11px;
+    width: 150px;
+    text-align: center;
+    padding: 2px;
+    color: $color-darkgreen;
 
+  }
+}

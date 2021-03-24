@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
   has_many :events
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
