@@ -30,9 +30,10 @@
                 <!-- BUTTON -->
                 <div class="back-btn d-flex justify-content-center">
                     <%= f.submit "create new guest", class: "btn-guest"  %>
+                </div>
                   <% end %>
 
-                </div>
+
 
 
                 <table class="table table-bordered">
@@ -86,11 +87,12 @@
                                 <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
                                   <i class="far fa-trash-alt"></i>
                                 <% end %>
+                                <% end%>
                                 </td>
                                 </tr>
+
+                            </tbody>
                             <% end%>
-                            <% end%>
-                        </tbody>
                     </table>
                 </div>
 
