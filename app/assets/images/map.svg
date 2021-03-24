@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="_x32_490755a-457e-4afb-a65a-0ea5e4d54fde"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 671 485.5"
+	 style="enable-background:new 0 0 671 485.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#F27400;}
+	.st2{opacity:0.3;}
+	.st3{fill:#F9A826;}
+	.st4{clip-path:url(#SVGID_3_);}
+	.st5{fill:#F9A826;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;}
+</style>
+<title>address</title>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="476.9597" y1="-12.9775" x2="476.9597" y2="340.7825" gradientTransform="matrix(1.0004 0.1386 0.1373 -0.9905 -163.1845 365.7891)">
+	<stop  offset="0" style="stop-color:#808080;stop-opacity:0.25"/>
+	<stop  offset="0.54" style="stop-color:#808080;stop-opacity:0.12"/>
+	<stop  offset="1" style="stop-color:#808080;stop-opacity:0.1"/>
+</linearGradient>
+<polygon class="st0" points="3.9,402 52.5,51.6 669.1,137.1 620.5,487.5 "/>
+<rect x="163.4" y="-37.1" transform="matrix(0.1373 -0.9905 0.9905 0.1373 22.5197 564.6957)" class="st1" width="344.1" height="613.1"/>
+<g class="st2">
+	
+		<rect id="f33a93cd-dff1-45ca-976d-3ca4de540e86" x="178.7" y="-24.6" transform="matrix(0.1373 -0.9905 0.9905 0.1373 23.2809 564.387)" class="st3" width="313.9" height="586.8"/>
+	<g>
+		<defs>
+			
+				<rect id="SVGID_2_" x="178.7" y="-24.6" transform="matrix(0.1373 -0.9905 0.9905 0.1373 23.2809 564.387)" width="313.9" height="586.8"/>
+		</defs>
+		<clipPath id="SVGID_3_">
+			<use xlink:href="#SVGID_2_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st4">
+			<polyline class="st5" points="29.5,68 265.4,459 408.9,478.9 659.5,333.2 461.7,71.8 111.1,437.6 -89.3,362.3 268.8,47.5 
+				560.8,500 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M317.4,273.3c-0.4,0-0.8,0-1.2-0.1c-3-0.4-5.8-2.1-7.3-4.7c-0.8-1.3-18.8-31.3-36.2-67.7
+			c-24.1-50.1-34.8-86.4-31.8-107.9c3.2-23,14.6-44.1,32.2-59.3c17.4-15.1,39.6-23.3,62.6-23.3c4.4,0,8.9,0.3,13.3,0.9
+			c25.3,3.5,47.8,16.7,63.2,37.1c15.3,20.3,21.9,45.2,18.6,70.4c0,0.2,0,0.4-0.1,0.6c-3,21.4-21.9,53.5-56.3,95.4
+			c-25,30.5-48.9,54.8-49.9,55.8C322.6,272.2,320.1,273.3,317.4,273.3z"/>
+		<path class="st6" d="M335.6,20.1c3.9,0,7.9,0.3,11.9,0.8c47,6.5,79.8,49.9,73.3,96.9l0,0c-6.5,47.1-103.4,145.6-103.4,145.6
+			s-73.3-122.1-66.7-169.2C256.6,51.2,293.5,20.1,335.6,20.1 M335.6,0.2c-25.3,0-49.8,9.1-69,25.8c-19.4,16.8-32,40-35.6,65.5
+			c-3.3,23.8,7.4,60.9,32.7,113.6c17.7,36.8,35.9,67.3,36.7,68.5c3.2,5.3,8.6,8.8,14.7,9.5c0.8,0.1,1.6,0.1,2.3,0.1
+			c5.3,0,10.4-2.1,14.1-5.9c1-1,25.1-25.6,50.5-56.5c36.1-44,55.2-76.8,58.5-100.3c0-0.3,0.1-0.6,0.1-0.8
+			c3.6-27.7-3.7-55.2-20.5-77.4c-17-22.5-41.8-37.1-69.8-40.9C345.4,0.6,340.5,0.2,335.6,0.2L335.6,0.2z"/>
+	</g>
+	
+		<ellipse transform="matrix(0.1373 -0.9905 0.9905 0.1373 192.2945 419.0194)" class="st6" cx="336.7" cy="99.1" rx="43" ry="42.9"/>
+</g>
+</svg>

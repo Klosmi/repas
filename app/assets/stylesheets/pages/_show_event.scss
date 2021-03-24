@@ -1,8 +1,8 @@
 .event-info {
-   display: flex;
-   margin-top: 40px;
-   flex-direction: column;
-   padding: 0 10vw;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    padding: 0 10vw;
 }
 
 .carres-flex1,
@@ -11,22 +11,65 @@
     justify-content: center;
 }
 
+// .moreinfo {
+//     width: 280px;
+//     height: 220px;
+//     border-radius: 10px;
+//     border: 1px solid $color-orange;
+//     font-size: 20px;
+//     text-align: center;
+//     margin: 10px;
+
+//     img {
+//         width: 280px;
+//         height: 150px;
+//         padding: 10px 5px 0px 5px;
+//     }
+
+//     .show-events-btn {
+//       font-weight: 800;
+//       text-decoration: none;
+//       color: $color-orange;
+//       &:hover{
+//         color: $color-lightorange
+//       }
+//     }
+// }
 .moreinfo {
     width: 280px;
     height: 220px;
     border-radius: 10px;
     border: 1px solid $color-orange;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+    padding-left: 15px;
     margin: 10px;
+    background-color: rgba(238, 232, 219, .3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition-duration: 500ms;
 
-    img {
-        width: 280px;
-        height: 150px;
-        padding: 10px 5px 0px 5px;
+    &:hover {
+        background-color: #FFF;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
     }
 
-    .show-events-btn {}
+    img {
+        width: 180px;
+        height: 150px;
+        padding: 20px 5px 0px 60px;
+    }
+
+    .show-events-btn {
+        font-weight: 800;
+        font-size: 16px;
+        text-decoration: none;
+        color: $color-orange;
+
+        &:hover {
+            color: $color-lightorange
+        }
+    }
 }
 
 .firstcarre {
@@ -35,7 +78,7 @@
     height: 220px;
     border-radius: 10px;
     border: 1px solid $color-orange;
-    font-size: 20px;
+    font-size: 16px;
     margin: 10px;
 
     p {
@@ -49,9 +92,9 @@
     }
 
     img {
-        width: 280px;
+        width: 180px;
         height: 150px;
-        padding: 10px 5px 0px 5px;
+        padding: 10px 5px 0px 100px;
     }
 }
 
@@ -73,9 +116,9 @@
     }
 
     img {
-        width: 280px;
-        height: 150px;
-        padding: 5px 5px 0px 5px;
+        width: 200px;
+        height: 140px;
+        padding: 5px 5px 0px 80px;
     }
 }
 
@@ -91,15 +134,15 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 600;
-        text-align: left;
+        text-align: center;
         color: $color-orange;
         margin: 20px;
     }
 
     img {
-        width: 280px;
+        width: 200px;
         height: 150px;
-        padding: 15px 5px 0px 5px;
+        padding: 15px 5px 0px 80px;
     }
 }
 
@@ -111,36 +154,40 @@
     padding: 0 40px;
 
     .back-btn .btn {
-        padding:12px 30px;
+        padding: 12px 30px;
     }
 }
-
 
 
 /* mobile view */
 @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-  .event-info{
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  }
+    .event-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .carres-flex1,
     .carres-flex2 {
         display: flex;
-         flex-wrap: wrap;
-        .moreinfo, .firstcarre, .secondcarre, .thirdcarre {
-          margin: 5px;
+        flex-wrap: wrap;
+
+        .moreinfo,
+        .firstcarre,
+        .secondcarre,
+        .thirdcarre {
+            margin: 5px;
         }
     }
 
     .twolink {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
 
-    .back-btn .btn {
-        padding: 10px 50px;
+        .back-btn .btn {
+            padding: 10px 50px;
+        }
     }
-}
 }

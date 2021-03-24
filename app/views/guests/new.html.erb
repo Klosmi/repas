@@ -4,7 +4,7 @@
     </h1>
     <div class="container">
         <div class="row">
-            <div class="will-be-hidden d-none ">
+            <div class="will-be-hidden  d-none">
                 <% @guests.each do |guest| %>
                 <%= guest.first_name %>
                 <%= guest.last_name %>
@@ -17,7 +17,7 @@
             </div>
             <!-- FORM -->
             <div class="block mt-6 mt-md-0 ">
-                <h2 class="d-flex justify-content-center"> Register new guests </h2>
+                <h2 class="d-flex justify-content-center register-title"> Register new guests </h2>
                 <div class="col-12 d-flex justify-content-center guestformulaire">
                     <%= simple_form_for ([@event, @guest]) do |f| %>
                     <%  @guests = @event.guests.order(created_at: :desc) %>
@@ -28,30 +28,30 @@
                 <!-- BUTTON -->
                 <div class="back-btn d-flex justify-content-center">
                     <%= f.submit "create new guest", class: "btn-guest"  %>
-
                     <% end %>
                 </div>
-
                 <table class="table table-bordered">
                     <tbody>
                         <br>
                         <!-- BUTTON -->
-                        <div class="d-flex justify-content-center registered-back pt-0 pt-md-5">
+                        <div class="d-flex justify-content-center registered-back pt-0 ">
                             <div class="back-btn">
                                 <%= link_to 'Back', events_path, class: "btn" %>
                             </div>
                         </div>
                         <!-- TABLE TITLE-->
                         <div class="table-main-title">
-                            <h2 class="d-flex justify-content-center"> List of registered guests </h2>
+                            <h2 class="d-flex justify-content-center list-of-registered-title"> List of registered guests </h2>
                             <%= form_tag new_event_guest_path(@event), method: :get do %>
                             <%= text_field_tag :query,
                       params[:query],
                       class: "form-control",
                       placeholder: "Find a guest" %>
-
-                            <%= submit_tag "Search", class: "btn btn-primary" %>
-                            <% end %>
+                            <!-- BUTTON -->
+                            <div class="search-button d-flex justify-content-center mt-2">
+                                <%= submit_tag "Search", class: "btn-search" %>
+                                <% end %>
+                            </div>
                         </div>
                         <!-- TABLE -->
                         <table class="table">
@@ -70,15 +70,15 @@
                                         <%= guest.last_name %>
                                     </td>
                                     <td class="email-cell text-wrap">
-                                        <%= guest.email %>
-                                                        <div class="trash d-flex justify-content-end ">
-                                        <% survey = guest.surveys.where(event_id:@event.id).first %>
-                                        <% if survey  %>
-                                        <%  link_to "edit form", edit_survey_path(survey) %>
-                                        <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
-                                        <i class="far fa-trash-alt"></i>
-                                        <% end %>
-                                  </div>
+                                        <%= mail_to guest.email %>
+                                        <div class="trash d-flex justify-content-end ">
+                                            <% survey = guest.surveys.where(event_id:@event.id).first %>
+                                            <% if survey  %>
+                                            <%  link_to "edit form", edit_survey_path(survey) %>
+                                            <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
+                                            <i class="far fa-trash-alt"></i>
+                                            <% end %>
+                                        </div>
                                     </td>
                                 </tr>
                                 <% end%>

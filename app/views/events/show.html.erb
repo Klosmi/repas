@@ -7,13 +7,17 @@
     <div class="event-info">
         <div class="carres-flex1">
             <div class="firstcarre">
-                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222263/undraw_events_2p66_ofigu3.svg">
+                <!--                 <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222263/undraw_events_2p66_ofigu3.svg">
+ -->
+                <%= image_tag("calendar.svg") %>
                 <p>
                     <%= @event.date %>
                 </p>
             </div>
             <div class="secondcarre">
-                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222542/address_ltx6hy.svg">
+                <!--                 <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616222542/address_ltx6hy.svg">
+ -->
+                <%= image_tag("map.svg") %>
                 <p>
                     <%= @event.address %>
                 </p>
@@ -21,32 +25,34 @@
         </div>
         <div class="carres-flex2">
             <div class="thirdcarre">
-                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223290/people_vr3emg.svg">
+                <!--                 <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223290/people_vr3emg.svg">
+ -->
+                <%= image_tag("people.svg") %>
                 <p>
                     <%= @event.number_guest %> guests
                 </p>
             </div>
             <div class="moreinfo">
-                <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223323/stat_heyhq7.svg">
+                <!-- <img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616223323/stat_heyhq7.svg"> -->
+                <%= link_to image_tag("stats.svg"),  event_preferences_path(@event.id), class:"show-events-btn" %>
                 <p>
                     <%= link_to "More information about the guest survey", event_preferences_path(@event.id), class:"show-events-btn" %>
                 </p>
             </div>
         </div>
         <div class="twolink">
-    <div class="backtaille">
-        <div class="back-btn">
-            <%= link_to"Back to events", events_path, class:"btn" %>
-        </div>
-    </div>
-    <br>
-    <div class="registertaille">
-        <div class="back-btn">
-            <%= link_to"Register guests", new_event_guest_path(@event.id), class:"btn" %>
+            <div class="backtaille">
+                <div class="back-btn">
+                    <%= link_to"Back to events", events_path, class:"btn" %>
+                </div>
+            </div>
             <br>
+            <div class="registertaille">
+                <div class="back-btn">
+                    <%= link_to"Register guests", new_event_guest_path(@event.id), class:"btn" %>
+                    <br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-    </div>
-</div>
-
