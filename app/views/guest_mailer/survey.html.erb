@@ -11,20 +11,22 @@
     Dear <%= @guest.first_name %> <%= @guest.last_name %>,
     <br>
     I am delighted to tell you, that your host is looking forward to see you.
-    Your host gave us your email to know if you have food constraint for the meal.
-    you can find enclosed a survey.
-
     <br>
-    Thanks for filling the food survey if necessary.
+
+    Your host gave us your email in order to know if you have food constraints for the meal.
+    You can find below the link in order to access to the survey.
+
+
     <br>
     best regards,
     <br>
 
-
-   <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"https://www.customfood.me") %>
-    <br>
-
    your host
-  </p>
 
+  <br>
+
+    Thanks for filling the food survey if it's necessary.
+    <br>
+  <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"https://www.customfood.me") %>
+  </p>
 </div>
