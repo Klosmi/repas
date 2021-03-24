@@ -1,102 +1,107 @@
+// .container-registered {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
-.backbtn{
-    padding: 10px 55px;
-    background-color: rgb(253, 187, 45);
-    background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
-    border-radius: 100px;
-    font-weight: 600;
-    color: #FFF;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transition-duration: 800ms;
-    margin: 30px 0px 0px 130px;
+/* form */
+#new_guest {
+    width: 50vw;
 }
 
-.backbtn:hover{
-        background-color: $color-lightorange;
-        text-decoration:none;
-        border-radius: 100px;
-        opacity:0.6;
-        color: white;
+.form-control:focus {
+text-decoration: none;
+box-shadow: none;
 }
 
+/* button */
+.registered-back {
+    padding: 20px 0;
 
-.guestformulaire{
-      width: 550px;
-      margin: 10px 5px 5px 280px;
-
+    .btn {
+        padding: 5px 160px;
+    }
 }
-
-.ex-product-form{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #F27400;
-      background-color:green;
+/* table */
+.table-registered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.formactions{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #F27400;
+.table {
+  border: none;
 }
-
-
 
 
 .titletb h2 {
-  width:680px;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.row {
-  margin: 15px 10px 10px 370px;
-
-  }
-
-
-.table-bordered
-{
-    width: 700px;
-    height: 180px;
+.table-bordered {
     border: 1px solid white;
     border-collapse: collapse;
-    background-color: #FCDAA4;
+    background-color: $color-butter;
     text-align: center;
 }
 
-.table-bordered th
-{
-
-    height: 10px;
-    font-size: small;
+.table-bordered th {
+    // height: 10px;
     border: 1px solid white;
-    background-color: #F27400;
+    background-color: $color-orange;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 1000;
     color: white;
 }
 
-.table-bordered tr
-{
-    border: 1px solid white;
-    background-color: #FCDAA4;
-    font-size: small;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 1000;
-    color: #F27400;
+tr:nth-child(even) {
+    background-color: $color-yellow;
 }
 
+tr {
+    border: 1px solid white;
+    background-color: $color-butter;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: $color-orange;
 
-tr:hover td{
-    background-color:orange;
-    ont-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 1000;
-    color: white;
+    &:hover {
+        background-color: $color-orange;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+    #new_guest {
+        width: 70vw;
+    }
+
+    #email-head {
+        padding: 10px 80px;
+        font-size: 15px;
+    }
+
+    .fname-head,
+    .lname-head {
+        padding: 10px 20%;
+        font-size: 15px;
+    }
+
+    td {
+        word-wrap: break-word;
+        max-width: 1px;
+        font-size: 14px;
+
+        .fname-cell,
+        .lname-cell {
+            padding: 5% 20%;
+        }
+
+        td .email-cell {
+            padding: 5% 60%;
+        }
 
     }
 
 
+}

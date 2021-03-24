@@ -6,14 +6,15 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-if Rails.env.development?
+
+# if Rails.env.development?
   Survey.destroy_all
   Guest.destroy_all
   Event.destroy_all
   User.destroy_all
-end
+# end
 
-user= User.new(email:"lindak16@yahoo.fr", password:"password")
+user = User.new(email:"lindak16@yahoo.fr", password:"password")
 user.save
 
 Event.create!(

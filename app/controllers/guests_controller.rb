@@ -7,6 +7,7 @@ class GuestsController < ApplicationController
   def new
     @guest = Guest.new
     @event = Event.find(params[:event_id])
+
     if params[:query].present?
       sql_query = "first_name ILIKE :query OR email ILIKE :query OR last_name ILIKE :query"
       @guests = @event.guests.where(sql_query, query: "%#{params[:query]}%")
@@ -14,6 +15,7 @@ class GuestsController < ApplicationController
      @guests = @event.guests
 
     end
+
   end
 
   def create

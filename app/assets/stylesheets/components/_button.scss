@@ -1,15 +1,7 @@
-/* navbar toggler (hamburger button) -> mobile view */
-.navbar-toggler {
-    border-radius: 100px;
-}
-.navbar-light .navbar-toggler {
-    border: solid 2px rgba(44, 66, 61, 0.7);
-}
-
 /* back button */
 .back-btn {
     .btn {
-        padding: 5px 110px;
+        padding: 5px 90px;
         background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
         border-radius: 100px;
         font-weight: 600;
@@ -23,8 +15,30 @@
             text-decoration: none;
             box-shadow: 0 0 0 rgba(0, 0, 0, 0);
         }
+
     }
 }
+
+.back-btn-events {
+    .btn {
+        padding: 5px 27px;
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        border-radius: 100px;
+        font-weight: 600;
+        color: #FFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition-duration: 800ms;
+
+        &:hover {
+            background-color: $color-butter;
+            color: $color-orange;
+            text-decoration: none;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+
+    }
+}
+
 
 /* login and sing button */
 .form-actions {
@@ -33,6 +47,8 @@
         background-color: $color-butter;
         border-radius: 100px;
         color: $color-orange;
+        transition-duration: 500ms;
+        font-weight: 500;
 
         &:hover {
             background-color: $color-lightorange;
@@ -179,5 +195,27 @@
     &:hover {
         color: $color-orange;
         text-decoration: none;
+    }
+}
+
+/* GUESTS : new.html.erb - create new guest*/
+.back-btn {
+    .btn-guest {
+        padding: 5px 110px;
+        background: linear-gradient(70deg, rgba(253, 187, 45, 1) 0%, rgba(242, 116, 0, 1) 100%);
+        border-radius: 100px;
+        font-weight: 600;
+        color: #FFF;
+        border: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition-duration: 800ms;
+
+        &:hover {
+            background-color: $color-butter;
+            color: $color-orange;
+            text-decoration: none;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+
     }
 }

@@ -1,33 +1,36 @@
-.form-control{
-  background-color: #FFF;
-  border-radius: 100px;
-  width: 100%;
-  outline:none !important;
-  border:1px solid #FCDAA4;
+.form-control {
+    background-color: #FFF;
+    border-radius: 100px;
+    width: 100%;
+    border: 1px solid $color-orange;
+    color: $color-orange;
 }
 
 .form-control:focus {
-  background-color:  #FCDAA4;
-  outline:none !important;
+    background-color: $color-butter;
+    color: $color-darkgreen;
+    outline: none !important;
 }
 
-.shared-links:hover{
-  margin: 20px auto;
-  text-align: center;
-  a{
-    margin-top: 20px;
-    border-radius:100px;
-    text-decoration: none;
-    color: #F27400;
-  }
+.shared-links:hover {
+    margin: 20px auto;
+    text-align: center;
+
+    a {
+        margin-top: 20px;
+        border-radius: 100px;
+        text-decoration: none;
+        color: $color-orange;
+    }
 }
 
-.shared-links{
-  margin: 20px auto;
-  text-align: center;
-  a{
-    margin-top: 20px;
-    border-radius:100px;
-    color: #707D7A;
-  }
+.shared-links {
+    margin: 20px auto;
+    text-align: center;
+
+    a {
+        margin-top: 20px;
+        border-radius: 100px;
+        color: $color-darkgreen;
+    }
 }
