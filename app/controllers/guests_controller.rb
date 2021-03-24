@@ -11,8 +11,9 @@ class GuestsController < ApplicationController
     if params[:query].present?
       sql_query = "first_name ILIKE :query OR email ILIKE :query OR last_name ILIKE :query"
       @guests = @event.guests.where(sql_query, query: "%#{params[:query]}%")
+
     else
-     @guests = @event.guests
+      @guests = @event.guests
 
     end
 
