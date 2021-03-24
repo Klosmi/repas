@@ -2,21 +2,39 @@
 <div class="container">
 
   <h1>Food constraint survey</h1>
+  <h3>Invitation: </h3>
+  <h4><%= @guest.event.title %></h4>
+  <h4><%= @guest.event.date %> </h4>
+  <h4><%= @guest.event.address %></h4>
 
-  <p>
-    Dear <%= @guest.first_name %> <%= @guest.last_name %>,
-    <br>
-    You are invited to a special occasion your host would like to know
-    if you have food constraint for the meal.
 
+
+  <h3 align="right"><%= Time.new %></h3>
+
+
+
+
+   <p>
+    Dear <%= @guest.first_name.capitalize %> <%= @guest.last_name.capitalize %>,
     <br>
-    Thanks for filling the food survey if necessary.
+    I am delighted to tell you, that your host is looking forward to see you at
+    <%= @guest.event.title %> the <%= @guest.event.date %>.
+    <br>
+
+    Your host gave us your email in order to know if you have food constraints for the meal.
+    You can find below the link in order to access to the survey.
+
+
     <br>
     best regards,
+    <br>
 
-   <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"https://www.customfood.me") %>
+   your host
 
+  <br>
 
+    Thanks for filling the food survey if it's necessary.
+    <br>
+  <%=  link_to "edit form", edit_survey_url(@guest.surveys.last, host:"https://www.customfood.me") %>
   </p>
-
 </div>
