@@ -22,6 +22,19 @@ class GuestsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+    @guest = Guest.find(params[:guest_id])
+
+    render 'events/show'
+  end
+
+  def destroy
+    @guest = Guest.find(params[:id])
+    @guest.destroy
+    redirect_to guest_path(@guest.event)
+  end
+
   def confirmation
   end
 

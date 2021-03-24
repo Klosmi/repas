@@ -1,0 +1,18 @@
+<div>
+    <h2>All guest and form confirmed</h2>
+</div>
+<%= column_chart @data %>
+
+<ul>
+  <% @data.each do |data| %>
+    <div>
+      <%= data[0] %> - <%= data[1] %> repas
+    </div>
+  <% end %>
+  <% @surveys.each do |survey| %>
+    <li>
+      <%= survey.guest.first_name %>  <%= survey.guest.last_name %>
+      <strong><%= survey.comment %></strong>
+    </li>
+  <% end %>
+</ul>
