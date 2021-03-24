@@ -2,15 +2,23 @@
 <div class="container">
 
   <h1>Food constraint survey</h1>
+  <h3>Invitation: </h3>
+  <h4><%= @guest.event.title %></h4>
+  <h4><%= @guest.event.date %> </h4>
+  <h4><%= @guest.event.address %></h4>
 
 
-                                            <%= Time.new %>
+
+  <h3 align="right"><%= Time.new %></h3>
 
 
-  <p>
-    Dear <%= @guest.first_name %> <%= @guest.last_name %>,
+
+
+   <p>
+    Dear <%= @guest.first_name.capitalize %> <%= @guest.last_name.capitalize %>,
     <br>
-    I am delighted to tell you, that your host is looking forward to see you.
+    I am delighted to tell you, that your host is looking forward to see you at
+    <%= @guest.event.title %> the <%= @guest.event.date %>.
     <br>
 
     Your host gave us your email in order to know if you have food constraints for the meal.
