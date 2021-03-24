@@ -51,7 +51,8 @@ class EventsController < ApplicationController
       format.html
       format.pdf do
         render  pdf: "file_name",
-                layout: 'pdf.html.erb' # Excluding ".pdf" extension.
+                layout: 'pdf.html.erb'
+                 # Excluding ".pdf" extension.
       end
     end
   end

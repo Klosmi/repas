@@ -1,19 +1,30 @@
 <div>
-    <h2>All guest and Allergy confirmed</h2>
+    <h2>All guest and Allergy confirmed for Event:  <%= @event.title%></h2>
 </div>
-
+<div class="result"><img src="https://res.cloudinary.com/dkqxfdutt/image/upload/v1616608698/columnresult_ralslv.png" alt="column"></div>
+<div class="container">
 
 <ul>
   <% @data.each do |data| %>
     <div>
       <%= data[0] %> - <%= data[1] %>
     </div>
+
   <% end %>
-  <% @surveys.each do |survey| %>
-    <li>
-      <%= survey.guest.first_name %>  <%= survey.guest.last_name %>
-    </div>
-      <strong><%= survey.comment %></strong>
-    </li>
-  <% end %>
-</ul>
+  </ul>
+  <table style="width:100%">
+
+    <tr>
+      <h2><strong><th>Firstname</th></strong></h2>
+      <h2><strong><th>Lastname</th></strong></h2>
+      <h2><strong><th>Comment</th></strong></h2>
+    </tr>
+    <% @surveys.each do |survey| %>
+    <tr>
+      <td><%= survey.guest.first_name %></td>
+      <td><%= survey.guest.last_name %></td>
+      <td><%= survey.comment %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
