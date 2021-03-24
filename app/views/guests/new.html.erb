@@ -21,21 +21,24 @@
                 <h2 class="d-flex justify-content-center mt-5 mt-md-0"> Register new guests </h2>
                 <div class="col-12 d-flex justify-content-center guestformulaire">
                     <%= simple_form_for ([@event, @guest]) do |f| %>
+                    <%  @guests = @event.guests.order(created_at: :desc) %>
                     <%= f.input :first_name %>
                     <%= f.input :last_name %>
                     <%= f.input :email %>
+
                 </div>
                 <!-- BUTTON -->
                 <div class="back-btn d-flex justify-content-center">
                     <%= f.submit "create new guest", class: "btn-guest"  %>
                   <% end %>
+
                 </div>
 
-                
+
                 <table class="table table-bordered">
                     <tbody>
 
-                
+
                 <br>
                 <!-- BUTTON -->
                 <div class="d-flex justify-content-center registered-back pt-0 pt-md-5">
@@ -51,7 +54,7 @@
                       params[:query],
                       class: "form-control",
                       placeholder: "Find a guest" %>
-                    
+
                    <%= submit_tag "Search", class: "btn btn-primary" %>
                 <% end %>
                 </div>
@@ -75,6 +78,7 @@
                                 <td class="email-cell text-wrap">
                                     <%= guest.email %>
                                 </td>
+                                <td>
                                 <% survey = guest.surveys.where(event_id:@event.id).first %>
                                 <% if survey  %>
                                 <%  link_to "edit form", edit_survey_path(survey) %>
@@ -82,7 +86,7 @@
                                 <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
                                   <i class="far fa-trash-alt"></i>
                                 <% end %>
-                           
+                                </td>
                                 </tr>
                             <% end%>
                             <% end%>
