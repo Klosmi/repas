@@ -4,20 +4,54 @@
 <%= column_chart @data %>
 <div class="container">
   <br>
-  <div class="accordion" id="accordionExample">
-    <% @surveys.each do |survey| %>
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne<%=  survey.id %>" aria-expanded="true" aria-controls="collapseOne<%=  survey.id %>">
-            <%= survey.guest.first_name %>  <%= survey.guest.last_name %>
-          </button>
-        </h3>
-        <div id="collapseOne<%=  survey.id %>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong><%= survey.comment %></strong>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="rowbouton">
+  <div class="backtaille">
+    <div class="back-btn">
+      <%= link_to"Back to event", event_path(@event.id), class:"btn" %>
+    </div>
   </div>
+  <%= link_to "Printable preferences for Event (PDF)", event_preferences_path(@event, format: :pdf) %></p>
 </div>
+
+<br>
+
+<table class="table">
+  <thead>
+  <th class="fname-head">First name</th>
+  <th class="lname-head">Last name</th>
+  <th id="email-head">Comment</th>
+  </thead>
+    <% @surveys.each do |survey| %>
+  <tbody>
+    <tr>
+      <td class="fname-cell text-wrap ">
+      <%= survey.guest.first_name %>
+      </td>
+      <td class="lname-cell text-wrap ">
+      <%= survey.guest.last_name %>
+      </td>
+      <td class="email-cell text-wrap">
+      <%= survey.comment %>
+      </td>
+    </tr>
+  </tbody>
+    <% end%>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
