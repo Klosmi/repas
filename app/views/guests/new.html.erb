@@ -2,6 +2,7 @@
     <h1>
         <%= @event.title %>
     </h1>
+
     <div class="container">
         <div class="row">
             <div class="will-be-hidden">
@@ -27,8 +28,14 @@
                 <!-- BUTTON -->
                 <div class="back-btn d-flex justify-content-center">
                     <%= f.submit "create new guest", class: "btn-guest"  %>
+                  <% end %>
                 </div>
-                <% end %>
+
+                
+                <table class="table table-bordered">
+                    <tbody>
+
+                
                 <br>
                 <!-- BUTTON -->
                 <div class="d-flex justify-content-center registered-back pt-0 pt-md-5">
@@ -39,9 +46,18 @@
                 <!-- TABLE TITLE-->
                 <div class="table-main-title">
                     <h2 class="d-flex justify-content-center"> List of registered guests </h2>
+                  <%= form_tag new_event_guest_path(@event), method: :get do %>
+                  <%= text_field_tag :query,
+                      params[:query],
+                      class: "form-control",
+                      placeholder: "Find a guest" %>
+                    
+                   <%= submit_tag "Search", class: "btn btn-primary" %>
+                <% end %>
                 </div>
                 <!-- TABLE -->
                     <table class="table">
+
                         <thead>
                             <th class="fname-head">First name</th>
                             <th class="lname-head">Last name</th>
@@ -62,12 +78,18 @@
                                 <% survey = guest.surveys.where(event_id:@event.id).first %>
                                 <% if survey  %>
                                 <%  link_to "edit form", edit_survey_path(survey) %>
-                            </tr>
+
+                                <%= link_to event_guest_path(@event, guest), method: :delete, data: {confirm: "Are you sure?"} do  %>
+                                  <i class="far fa-trash-alt"></i>
+                                <% end %>
+                           
+                                </tr>
                             <% end%>
                             <% end%>
                         </tbody>
                     </table>
                 </div>
+
             </div>
         </div>
     </div>

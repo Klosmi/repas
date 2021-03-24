@@ -1,5 +1,6 @@
 
 <h1>Here all list of guest created</h1>
+
 <% if @guests.present? %>
 <% @guests.each do |guest| %>
 <div> <%= @event.guest.first_name %>
@@ -7,10 +8,10 @@
 <%= guest.email %>
 </div>
 <% @event.guests.each do |guest| %>
-    <%= link_to "<i class=\"far fa-trash-alt\"></i>".html_safe, dose_path(dose), method: :destroy, data: {confirm: "Are you sure?"} %>
-    </li>
+    <%= link_to "<i class=\"far fa-trash-alt\"></i>".html_safe,  event_guests_path(@event.id), method: :destroy, data: {confirm: "Are you sure?"} %>
   <% end %>
 
 <% end %>
 <% end %>
+
 

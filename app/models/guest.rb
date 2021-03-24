@@ -1,6 +1,6 @@
 class Guest < ApplicationRecord
   belongs_to :event
-  has_many :surveys
+  has_many :surveys, dependent: :destroy
   validates :email, presence: true #, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -12,5 +12,5 @@ class Guest < ApplicationRecord
   def create_invit
     Survey.create(guest:self, event:self.event)
   end
-  
+
 end
