@@ -24,7 +24,7 @@ class GuestsController < ApplicationController
       GuestMailer.with(guest:@guest).survey.deliver_now
       redirect_to new_event_guest_path(@event), notice: "Guest is saved"
     else
-      render :index
+      render :new
     end
   end
 
