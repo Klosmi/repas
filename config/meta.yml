@@ -1,0 +1,5 @@
+meta_product_name: "Custom Food"
+meta_title: "Custom Food - nobody stays hungry"
+meta_description: "It is an appliction to coolect data to know people's food restriction in advance."
+meta_image: "CF.png" # should exist in `app/assets/images/`
+twitter_account: "@customfood_twitter_account"   # required for Twitter Cards
