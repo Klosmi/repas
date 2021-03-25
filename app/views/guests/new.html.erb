@@ -1,3 +1,4 @@
+
 <div class="barreorange">
     <h1>
         <%= @event.title %>
@@ -20,7 +21,6 @@
                 <h2 class="d-flex justify-content-center register-title"> Register new guests </h2>
                 <div class="col-12 d-flex justify-content-center guestformulaire">
                     <%= simple_form_for ([@event, @guest]) do |f| %>
-                    <%  @guests = @event.guests.order(created_at: :desc) %>
                     <%= f.input :first_name %>
                     <%= f.input :last_name %>
                     <%= f.input :email %>
@@ -42,24 +42,27 @@
                         <!-- TABLE TITLE-->
                         <div class="table-main-title">
                             <h2 class="d-flex justify-content-center list-of-registered-title"> List of registered guests </h2>
-                            <%= form_tag new_event_guest_path(@event), method: :get do %>
+                            <%= form_tag new_event_guest_path(@event.id), method: :get do %>
                             <%= text_field_tag :query,
                       params[:query],
                       class: "form-control",
                       placeholder: "Find a guest" %>
+
                             <!-- BUTTON -->
                             <div class="search-button d-flex justify-content-center mt-2">
                                 <%= submit_tag "Search", class: "btn-search" %>
 
                             </div>
-                            <% end %>
+                          <% end %>
                         </div>
                         <!-- TABLE -->
                         <table class="table">
                             <thead>
+                              <tr>
                                 <th class="fname-head">First name</th>
                                 <th class="lname-head">Last name</th>
                                 <th id="email-head">Email</th>
+                              </tr>
                             </thead>
                             <tbody>
                             <% @guests.each do |guest| %>

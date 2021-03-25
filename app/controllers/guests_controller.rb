@@ -10,12 +10,10 @@ class GuestsController < ApplicationController
 
     if params[:query].present?
       sql_query = "first_name ILIKE :query OR email ILIKE :query OR last_name ILIKE :query"
-      @guests = @event.guests.where(sql_query, query: "%#{params[:query]}%")
-
+      @guests = @event.guests.where(sql_query, query: "%#{params[:query]}%").order(created_at: :desc)
     else
-      @guests = @event.guests
+      @guests = @event.guests.order(created_at: :desc)
     end
-
   end
 
   def create
@@ -28,7 +26,6 @@ class GuestsController < ApplicationController
     else
       render :index
     end
-
   end
 
   def edit
