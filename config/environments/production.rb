@@ -1,5 +1,7 @@
 
   Rails.application.configure do
+  # error pages
+  config.exceptions_app = self.routes
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "https://www.customfood.me" }
@@ -49,7 +51,7 @@
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
