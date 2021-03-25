@@ -9,12 +9,14 @@
   padding: 20px 0;
 }
 
-
+.container-event {
+    max-height: 114px;
+}
 /* event bars */
 .buttonevent {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .allevents {
