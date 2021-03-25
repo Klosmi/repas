@@ -1,7 +1,5 @@
 
-  Rails.application.configure do
-  # error pages
-  config.exceptions_app = self.routes
+Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "https://www.customfood.me" }
