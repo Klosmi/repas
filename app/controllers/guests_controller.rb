@@ -14,7 +14,6 @@ class GuestsController < ApplicationController
 
     else
       @guests = @event.guests
-
     end
 
   end
