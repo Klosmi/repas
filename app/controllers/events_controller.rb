@@ -24,8 +24,6 @@ class EventsController < ApplicationController
   def preferences
     @event = Event.find(params[:event_id])
     @surveys = Survey.where(event_id: @event.id)
-    #@data = @surveys.group(:nut)# :peanut, :shellfish, :egg, :fish, :soy, :celery, :sesame_seed, :milk, :sulphite, :mustard, :gluten, :salt, :sugar, :hallal, :casher, :vegan, :vegetarian).count
-
     @data = [
       ["nut", @surveys.where(nut: true).count],
       ["peanut", @surveys.where(peanut: true).count],
